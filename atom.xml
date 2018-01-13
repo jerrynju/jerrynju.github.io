@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>格知阁</title>
   
-  
+  <subtitle>Jerry的博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2018-01-11T04:34:08.141Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://jerrynju.github.io/"/>
+  <updated>2018-01-11T07:11:33.185Z</updated>
+  <id>http://jerrynju.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Jerry Chen</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>我的第一篇Hexo博文</title>
+    <link href="http://jerrynju.github.io/2018/01/11/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87Hexo%E5%8D%9A%E6%96%87/"/>
+    <id>http://jerrynju.github.io/2018/01/11/我的第一篇Hexo博文/</id>
+    <published>2018-01-11T07:10:00.000Z</published>
+    <updated>2018-01-11T07:11:33.185Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="这是我的第一篇Hexo博文"><a href="#这是我的第一篇Hexo博文" class="headerlink" title="这是我的第一篇Hexo博文"></a>这是我的第一篇Hexo博文</h1><p><strong>test</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;这是我的第一篇Hexo博文&quot;&gt;&lt;a href=&quot;#这是我的第一篇Hexo博文&quot; class=&quot;headerlink&quot; title=&quot;这是我的第一篇Hexo博文&quot;&gt;&lt;/a&gt;这是我的第一篇Hexo博文&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;test&lt;/strong&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/01/11/hello-world/"/>
-    <id>http://yoursite.com/2018/01/11/hello-world/</id>
+    <link href="http://jerrynju.github.io/2018/01/11/hello-world/"/>
+    <id>http://jerrynju.github.io/2018/01/11/hello-world/</id>
     <published>2018-01-11T04:34:08.141Z</published>
     <updated>2018-01-11T04:34:08.141Z</updated>
     
