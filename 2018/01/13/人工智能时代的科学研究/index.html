@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jerry's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="最近几年，以深度学习为代表的人工智能技术迎来了一次革命。目前，人工智能最为热门的方向在图像识别、自动驾驶、语音识别等领域。和这些领域层出不穷的明星初创公司相比，人工智能技术在科研领域的应用则相对少有人关注。然而，在这一领域，其实是有不少非常有趣的研究成果，本文将尝试进行一些总结。 科研领域人工智能技术的应用前景科研可以说是人类探索未知的最前沿战场，然而，和很多人所想象的不同的是，科研领域的生产力发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jerry&#39;s Blog">
+<meta property="og:url" content="https://jerrynju.github.io/2018/01/13/人工智能时代的科学研究/index.html">
+<meta property="og:site_name" content="Jerry&#39;s Blog">
+<meta property="og:description" content="最近几年，以深度学习为代表的人工智能技术迎来了一次革命。目前，人工智能最为热门的方向在图像识别、自动驾驶、语音识别等领域。和这些领域层出不穷的明星初创公司相比，人工智能技术在科研领域的应用则相对少有人关注。然而，在这一领域，其实是有不少非常有趣的研究成果，本文将尝试进行一些总结。 科研领域人工智能技术的应用前景科研可以说是人类探索未知的最前沿战场，然而，和很多人所想象的不同的是，科研领域的生产力发">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-13T08:26:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jerry&#39;s Blog">
+<meta name="twitter:description" content="最近几年，以深度学习为代表的人工智能技术迎来了一次革命。目前，人工智能最为热门的方向在图像识别、自动驾驶、语音识别等领域。和这些领域层出不穷的明星初创公司相比，人工智能技术在科研领域的应用则相对少有人关注。然而，在这一领域，其实是有不少非常有趣的研究成果，本文将尝试进行一些总结。 科研领域人工智能技术的应用前景科研可以说是人类探索未知的最前沿战场，然而，和很多人所想象的不同的是，科研领域的生产力发">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jerrynju.github.io/2018/01/13/人工智能时代的科学研究/"/>
+
+
+
+
+
+  <title> | Jerry's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jerry's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Jerry的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jerrynju.github.io/2018/01/13/人工智能时代的科学研究/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jerry Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jerry's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T16:27:04+08:00">
+                2018-01-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近几年，以深度学习为代表的人工智能技术迎来了一次革命。目前，人工智能最为热门的方向在图像识别、自动驾驶、语音识别等领域。和这些领域层出不穷的明星初创公司相比，人工智能技术在科研领域的应用则相对少有人关注。然而，在这一领域，其实是有不少非常有趣的研究成果，本文将尝试进行一些总结。</p>
+<h2 id="科研领域人工智能技术的应用前景"><a href="#科研领域人工智能技术的应用前景" class="headerlink" title="科研领域人工智能技术的应用前景"></a>科研领域人工智能技术的应用前景</h2><p>科研可以说是人类探索未知的最前沿战场，然而，和很多人所想象的不同的是，科研领域的生产力发展水平其实是相当低的。这一方面是由于科研领域众多，研究方向分散，没法规模化；另一方面是作为科研主体的研究生们价格十分低廉，采用手工作坊模式比较具有性价比。</p>
+<p>但是科研发展到今天，寻找更有效率的工具既是美好的期望也是刻不容缓的现实需求。这是因为在大家的不懈灌水之下，现在科研论文的产出速度已经非常快了。即使是一个非常小众的领域，一个人阅读文献的速度也很难跟上新文献的产出速度。当然，我们可以通过个人经验筛选出其中有价值的那些，但是这就像手工作坊依赖老师傅一样，这样抽象的经验是否合理，能否传承是一个大问题。</p>
+<p>那么，科学研究的哪些流程可以做的更好一点呢？这里我们可以列举一些：</p>
+<ol>
+<li>检索。我们通常的搜索方式是在各个搜索引擎的搜索框里输出文字，获得返回的网页、图片等信息。但是对于科研来说，除了文字之外，我们还希望能够检索公式、专有名词、图片等等。这些检索内容在通常的搜索引擎中很难获得有效的结果。</li>
+<li>引文网络。对于一篇文献来说，它引用的文献和引用它的文献都是很重要的参考信息。虽然很多出版商的网站提供了获取文献引文的选项，但是文献通常是以PDF的形式传播，我们希望能直接从离线存储的PDF文件中还原出它的引文信息。此外，如果能够从一片文献出发，描绘出相关的引文网络，我们就能够找到该领域的重要文献，非常有利于我们快速的掌握一个领域的核心信息。</li>
+<li>知识记录。一篇文献的细节往往是非常之多的，一般情况下，我们只能通过在PDF文件或者引文管理软件中标注来记录重要的信息，可是，这样的记录方式显然是不够有效的，不仅很难讲零散记录的信息集中整理，时间一长也很容易遗忘当初标记的初衷。</li>
+</ol>
+<h2 id="问题的根源"><a href="#问题的根源" class="headerlink" title="问题的根源"></a>问题的根源</h2><p>为什们会有这些问题呢？究其根本，这是因为现在的科研出版体系还停留在纸质时代，然而我们的工作方式早已迈入了互联网时代。令人悲观的是，这些问题虽然引起了一些人的关注，但是可能很难在短期内解决。因为工作效率的低下耗费的只是研究生们的青春，而这个行业并不缺源源不断涌入的勤劳的学生。而且，科研是一个垄断行业，几大国际出版商把持了绝对的话语权，如果他们没有变革的动力，行业本身并不会发生根本的变化。</p>
+<p>但是对于学生们来说，时间是宝贵的财富。工作效率是赢得时间的根本手段，因此我们非常有必要关注一些能提高效率的工具。这里，我将列举一些最新的工具，他们也许能在你的日常工作中派上用场。需要注意的是，这里的很多工具具有实验性质，他们的功能可能还相当不完善，因此需要你自己使用之后来判断它的价值。</p>
+<h2 id="科研工具的搜索引擎——LabWorm"><a href="#科研工具的搜索引擎——LabWorm" class="headerlink" title="科研工具的搜索引擎——LabWorm"></a>科研工具的搜索引擎——LabWorm</h2><p><a href="https://labworm.com/" target="_blank" rel="noopener">LabWorm</a>是一个用来搜索科研工具的搜索引擎，这里有着各种五花八门的科研相关工具。</p>
+<h2 id="检索工具"><a href="#检索工具" class="headerlink" title="检索工具"></a>检索工具</h2><h3 id="更具深度的文献搜索引擎"><a href="#更具深度的文献搜索引擎" class="headerlink" title="更具深度的文献搜索引擎"></a>更具深度的文献搜索引擎</h3><p><a href="https://www.aminer.cn/" target="_blank" rel="noopener">AMiner</a>是由清华大学的团队开发的文献检索引擎，相比传统的文献检索引擎，它提供了更多更具深度的内容，比如，按照h-index排序检索结果，给出作者的常见合作者，文章或者领域的历年引用趋势等等，同时它还提供一定的社交功能，可以对作者投票或者评论。可以说AMiner代表了文献搜索引擎的未来。但是它主要侧重计算机领域的文献，其它领域的文献信息不是非常完善。</p>
+<h3 id="用公式来搜索维基百科"><a href="#用公式来搜索维基百科" class="headerlink" title="用公式来搜索维基百科"></a>用公式来搜索维基百科</h3><p><a href="http://59.108.48.32:8080/" target="_blank" rel="noopener">Koala</a>能够让你通过输入Latex表达式形式的公式来检索维基百科，它会自动分析相近形式的公式，给出相关维基百科条目的链接。</p>
+<h3 id="用公式来搜索网页"><a href="#用公式来搜索网页" class="headerlink" title="用公式来搜索网页"></a>用公式来搜索网页</h3><p><a href="http://uniquation.com/en/" target="_blank" rel="noopener">uniquation</a>，如果你希望用公式来搜索所有网页结果，可以试试这个，同样需要以Latex形式输入公式，也会给出相近形式的公式。如果你对Latex表达式的写法不熟悉，可以搜索一些在线的Latex公式转换器。</p>
+<h3 id="用图片来搜索论文"><a href="#用图片来搜索论文" class="headerlink" title="用图片来搜索论文"></a>用图片来搜索论文</h3><p><a href="http://viziometrics.org/" target="_blank" rel="noopener">Viziometrics</a>是一个完全基于图片的搜索引擎。其实论实用性，它估计比不上谷歌图片搜索。它是直接提取论文中的图片和图片标题来生成相关搜索项，是一个非常有意思的工具，虽然打开速度很慢。</p>
+<h2 id="引文相关工具"><a href="#引文相关工具" class="headerlink" title="引文相关工具"></a>引文相关工具</h2><h3 id="自动提取PDF中的文献信息"><a href="#自动提取PDF中的文献信息" class="headerlink" title="自动提取PDF中的文献信息"></a>自动提取PDF中的文献信息</h3><p><a href="http://cermine.ceon.pl/index.html" target="_blank" rel="noopener">cermine</a>是一个开源项目，它提供一个在线工具，能够将你上传的PDF格式的文献中的关键信息提取出来，这些信息包括作者、单位、摘要、参考文献等等。</p>
+<h3 id="引用文献的逆向格式化"><a href="#引用文献的逆向格式化" class="headerlink" title="引用文献的逆向格式化"></a>引用文献的逆向格式化</h3><p><a href="http://git.macropus.org/citation-finder/" target="_blank" rel="noopener">CitationFinder</a>是一个相当神奇的实用工具。我们知道，文献管理软件可以将数据库导出成各种专有格式，这些格式可以转换成txt。可是，反过来把TXT还原成文献管理软件能够识别的格式却是一个难题。这个网站可以将大段TXT格式的参考文献列表转换成常用的文献管理软件能够识别的格式，正确率相当高。</p>
+<h3 id="公式自动识别"><a href="#公式自动识别" class="headerlink" title="公式自动识别"></a>公式自动识别</h3><p><a href="http://www.inftyreader.org/" target="_blank" rel="noopener">InftyReader</a>是一个OCR软件，它的强大之处在于它能够将pdf文件中的公式转换成Word或者Latex格式，准确率是目前最高的。</p>
+<h3 id="引文网络分析"><a href="#引文网络分析" class="headerlink" title="引文网络分析"></a>引文网络分析</h3><p>理论上来说，引文网络分析是科学研究中的重要内容，但是实际上却很少有人去做这样的事情。原因是多方面的，一是：引文网络本身涉及的方面非常多，比如作者之间的引用关系，期刊权重的排序等等；二是，一旦涉及到较深的层次，引文的数量将会非常庞大，导致获取、分析和展示文献信息都将变得非常缓慢；三是，如何将复杂的网络清晰的展现出来，并从中发掘有用的信息也是一个难题。所以，虽然现在已经有一些工具能够实现引文网络的分析，但是学习成本相当高，普及率很低。目前，常用的引文分析软件包括：CiteSpace、SCI2和HistCite，有兴趣的人自行尝试。需要注意的是，官方的HistCite版本有一些Bug，如果需要可以用<a href="https://zhuanlan.zhihu.com/p/20902898" target="_blank" rel="noopener">这里</a>的版本。</p>
+<h2 id="科研知识管理"><a href="#科研知识管理" class="headerlink" title="科研知识管理"></a>科研知识管理</h2><h3 id="用思维导图管理文献"><a href="#用思维导图管理文献" class="headerlink" title="用思维导图管理文献"></a>用思维导图管理文献</h3><p>如果将数量繁多的文献中有用的信息组织起来是一个难题，将文献以思维导图的形式组织起来是一个可供尝试的方向。<a href="http://www.docear.org/" target="_blank" rel="noopener">Docear</a>就是为这一目的而生的软件。它的功能比较完善，但是使用起来有些复杂。</p>
+<h3 id="与PDF阅读器集成的文献管理软件"><a href="#与PDF阅读器集成的文献管理软件" class="headerlink" title="与PDF阅读器集成的文献管理软件"></a>与PDF阅读器集成的文献管理软件</h3><p>与思维导图这一本身并不太普及的形式相比，直接在PDF文件上标注信息则实用的多，然而，如何将标注的信息组织起来呢？Mac和iOS上有一款国人开发的软件<a href="https://marginnote.com/?lang=zh-hans" target="_blank" rel="noopener">MarginNote</a>就是为这一目的量身打造，它不仅可以将PDF文件中的信息用思维导图组织起来，还可以生成记忆卡片，用作背诵之用，因而广受医学、法律专业的学生欢迎。遗憾的是，这一软件并没有Windows版本。</p>
+<p>Windows用户可以使用文献管理软件<a href="https://www.softhead-citavi.com/" target="_blank" rel="noopener">Citavi</a>，在提供常用的文献管理，Word引文插入功能之外，它还提供了一个Adobe PDF 阅读器的插件，可以直接在PDF文件上标注，这些标注的信息可以单独组织管理，也可以导出到思维导图软件。这个软件的另外一个亮点是，在Word中不仅可以插入文献库中的文献，也可以检索插入标注的文献中的信息。</p>
+<p>除了文献管理软件之外，还有一类更专业的文件标注工具，学名叫质性分析软件，在心理学、社会学等学科比较常用。这类软件能够标注的文件类型更为广泛，以常用的atlas.ti软件为类，它除了可以标记PDF、Word之外，还可以标记音频、视频，标注的信息以节点方式组织，可以注释、组合、链接。这类软件适合分析含有大量文本、音视频数据，需要提取抽象信息的项目。</p>
+<h2 id="幻想未来"><a href="#幻想未来" class="headerlink" title="幻想未来"></a>幻想未来</h2><p>科学研究有着理论上的巨大价值，但是对于身在其中的从业者，个中甘苦，唯有己知。本文介绍了很多具有实验性质的工具，它们中到底哪些能够真的普及，尚未可知。趁着人工智能的东风，不妨让我们畅想一下科学研究的未来，想象一下，人工智能在科学研究中有哪些应用前景。</p>
+<ol>
+<li>自动提取PDF格式文献的核心信息，识别其中的各个区域，生成结构化文件。这涉及到版面识别，文本OCR等方面。现在已经有一些相对成熟的工作。</li>
+<li>内容感知检索。将PDF文件中的公式、专有名字、图片加入针对性的检索选项，可以一键搜索相关内容。</li>
+<li>学术专用的网络爬虫。针对作者、单位，通过网络爬虫搜索到课题组主页、作者职称、单位排名等信息。</li>
+<li>试剂、仪器识别。针对文献中提到的试剂、仪器信息，自动给出相应的购买链接和参考价格。</li>
+<li>合作式的标注和社交化评论。不同地点的作者可以共同标记同一篇文献，并且可以相互查阅。同时可以建立一个问答平台，作者和读者可以直接交流。读者可以点赞，也可以质疑。</li>
+<li>引文网络生成和文献推荐。自动生成文献的引用和被引网络，同时根据文献的关键词和相关文献，自动推荐相关论文。</li>
+<li>知识链接。对于文献中提到的知识，可以自动链接教科书中对应的内容。</li>
+<li>语义分析。自动分析文献中语句含义，归纳提取关键信息，生成逻辑关系图。</li>
+<li>语言翻译。将英文自动翻译成其他语言。</li>
+<li>链接企业。根据文献信息，链接到关注或者从事相关技术的公司。</li>
+<li>团队管理和流程控制。 引入企业中的团队管理体系和流程化工作方式，便于课题组绩效考核和效率控制。<br>。。。。<br>可以想象的地方还有很多，但是要想完全实现上面的设想，恐怕需要一个堪比BAT规模的企业。<br>但是再完善的工具也只是工具，最核心的仍然是人类自身的创造力。</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>给博主捐赠一杯咖啡。</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Jerry Chen 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Jerry Chen 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/13/SSH入门及基础命令大全/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/13/短时间就能学会的受用终身的技能/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Jerry Chen" />
+            
+              <p class="site-author-name" itemprop="name">Jerry Chen</p>
+              <p class="site-description motion-element" itemprop="description">Live a valuable life!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/jerrynju" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chenjiarui_nju@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#科研领域人工智能技术的应用前景"><span class="nav-number">1.</span> <span class="nav-text">科研领域人工智能技术的应用前景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题的根源"><span class="nav-number">2.</span> <span class="nav-text">问题的根源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#科研工具的搜索引擎——LabWorm"><span class="nav-number">3.</span> <span class="nav-text">科研工具的搜索引擎——LabWorm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检索工具"><span class="nav-number">4.</span> <span class="nav-text">检索工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更具深度的文献搜索引擎"><span class="nav-number">4.1.</span> <span class="nav-text">更具深度的文献搜索引擎</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用公式来搜索维基百科"><span class="nav-number">4.2.</span> <span class="nav-text">用公式来搜索维基百科</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用公式来搜索网页"><span class="nav-number">4.3.</span> <span class="nav-text">用公式来搜索网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用图片来搜索论文"><span class="nav-number">4.4.</span> <span class="nav-text">用图片来搜索论文</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引文相关工具"><span class="nav-number">5.</span> <span class="nav-text">引文相关工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自动提取PDF中的文献信息"><span class="nav-number">5.1.</span> <span class="nav-text">自动提取PDF中的文献信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用文献的逆向格式化"><span class="nav-number">5.2.</span> <span class="nav-text">引用文献的逆向格式化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公式自动识别"><span class="nav-number">5.3.</span> <span class="nav-text">公式自动识别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引文网络分析"><span class="nav-number">5.4.</span> <span class="nav-text">引文网络分析</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#科研知识管理"><span class="nav-number">6.</span> <span class="nav-text">科研知识管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用思维导图管理文献"><span class="nav-number">6.1.</span> <span class="nav-text">用思维导图管理文献</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与PDF阅读器集成的文献管理软件"><span class="nav-number">6.2.</span> <span class="nav-text">与PDF阅读器集成的文献管理软件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#幻想未来"><span class="nav-number">7.</span> <span class="nav-text">幻想未来</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jerry Chen</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

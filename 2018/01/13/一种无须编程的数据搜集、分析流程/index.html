@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jerry's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="一种无须编程的数据搜集、分析流程前言这是一个信息爆炸的时代，信息产生的速度已经远远找过了我们阅读和理解信息的速度。但是，现在层出不穷的海量信息中真正有用的却是少数，如果全部依赖人工来查找、搜集和分析这些海量的信息，效率将会非常低下。虽然大数据技术已经火爆了几年了，但是如何将这些技术真正应用到日常工作中仍然是一个难题，因为并不是所有人都会编程，都有经历去针对一些简单的需求搭建复杂的工具。所以这里我尝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jerry&#39;s Blog">
+<meta property="og:url" content="https://jerrynju.github.io/2018/01/13/一种无须编程的数据搜集、分析流程/index.html">
+<meta property="og:site_name" content="Jerry&#39;s Blog">
+<meta property="og:description" content="一种无须编程的数据搜集、分析流程前言这是一个信息爆炸的时代，信息产生的速度已经远远找过了我们阅读和理解信息的速度。但是，现在层出不穷的海量信息中真正有用的却是少数，如果全部依赖人工来查找、搜集和分析这些海量的信息，效率将会非常低下。虽然大数据技术已经火爆了几年了，但是如何将这些技术真正应用到日常工作中仍然是一个难题，因为并不是所有人都会编程，都有经历去针对一些简单的需求搭建复杂的工具。所以这里我尝">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-3cfd9b147b3c798c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-300b2d2e95220396.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-31750426f51fdfab.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-83eb976287971745.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-4e76a5671bf099ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-85980e0bb4225f8c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-aa44cab6a128f550.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-5785769328662218.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-4435d3143cfa760a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-c6ae613e47a9005a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-56ae21a7056ce135.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-70954e5af01bfe6d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-c11e813e57de7837.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-8005ca1a5688e425.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-488c2c020caf63dd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-01-13T08:26:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jerry&#39;s Blog">
+<meta name="twitter:description" content="一种无须编程的数据搜集、分析流程前言这是一个信息爆炸的时代，信息产生的速度已经远远找过了我们阅读和理解信息的速度。但是，现在层出不穷的海量信息中真正有用的却是少数，如果全部依赖人工来查找、搜集和分析这些海量的信息，效率将会非常低下。虽然大数据技术已经火爆了几年了，但是如何将这些技术真正应用到日常工作中仍然是一个难题，因为并不是所有人都会编程，都有经历去针对一些简单的需求搭建复杂的工具。所以这里我尝">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1536844-3cfd9b147b3c798c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jerrynju.github.io/2018/01/13/一种无须编程的数据搜集、分析流程/"/>
+
+
+
+
+
+  <title> | Jerry's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jerry's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Jerry的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jerrynju.github.io/2018/01/13/一种无须编程的数据搜集、分析流程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jerry Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jerry's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T16:27:04+08:00">
+                2018-01-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一种无须编程的数据搜集、分析流程"><a href="#一种无须编程的数据搜集、分析流程" class="headerlink" title="一种无须编程的数据搜集、分析流程"></a>一种无须编程的数据搜集、分析流程</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是一个信息爆炸的时代，信息产生的速度已经远远找过了我们阅读和理解信息的速度。但是，现在层出不穷的海量信息中真正有用的却是少数，如果全部依赖人工来查找、搜集和分析这些海量的信息，效率将会非常低下。虽然大数据技术已经火爆了几年了，但是如何将这些技术真正应用到日常工作中仍然是一个难题，因为并不是所有人都会编程，都有经历去针对一些简单的需求搭建复杂的工具。所以这里我尝试探讨一种无须编程的工作方式来实现信息的高效率搜集和处理。目标是用最简单的工具来满足最现实需求。</p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>这个工作流程主要由两部分组成，一是通过网络爬虫软件批量搜集信息，这一部分主要是通过八爪鱼搜集器来实现；另一部分是数据的处理、分析和展示，这一部分主要是通过KNIME分析软件来实现。这两个软件是笔者经过很多尝试以后的选择，下面笔者简单解释一下为什么选择这两个软件。</p>
+<p>八爪鱼搜集器是一个国产的商业爬虫工具。爬虫工具有很多，开源和免费的也不少，为什么选择这一款商业软件呢？主要是基于以下考虑：一是这个软件操作足够简单、功能足够强大。爬虫看起来是一个简单的需求，但是其中的坑非常多，对于非程序员来说，想要快速实现自己的需求还是需要依赖一些成熟的工具。这一点上，这个软件能够满足需求，它既提供功能强大的自定义模式，也提供傻瓜化的自动模式。二是，虽然它是商业软件，但是对于一般用户来说，使用免费单机版就够了，初始积分足够采集数万条数据。当然如果你有其他的比较熟悉的工具也完全可以替代这个软件。</p>
+<p>KNIME是一个较为知名的开源数据分析平台，Java语言编写，基于Eclipse平台构建。它是一个相对比较完善的大数据分析平台，提供了丰富的扩展。它的主要优点有下面几点：一是开源、免费。二是图形化操作方式，只需要通过拖动各个模块，然后连接起来就可以实现各种分析功能。三是KNIME中的工作流程可以分部执行，便于初学者及时发现错误。四是强大的扩展能力，我们可以在工作流中插入R、Python、Java和JavaScript代码片段，实现各种强大功能。在我们这个工作流中，KNIME是后期处理的核心。当然，它还是有一定的学习难度的，它的所有界面、文档都是英文的，工具也非常多，熟悉起来需要花费一定的时间。</p>
+<h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><p>我尝试通过两个例子来说明这一流程的工作方式。</p>
+<p>第一个例子是在科学网上自动查找各高校和科研机构的招聘信息，提取出其中的关键内容，并且将招聘信息按照地理位置进行分类，便于找工作的时候根据自己的偏好浏览最值得关注的信息。科学网上常年有很多的招聘信息，但是这些信息往往篇幅很长，我们在浏览这些信息之前往往有一些自己的求职意向，比如希望招聘单位限定在某个地区，或者单位待遇如何。对大量此类信息的自动处理能够让我们将主要精力集中在符合我们需求的信息上，大大节省我们的时间。同样，篇幅所限，这里我们展示的具体任务过程是，从科学网上获取100条招聘信息，提取出招聘信息中的招聘单位名称，通过调用百度地图的API自动获得这些招聘单位的地址，并且在地图上展示出来。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-3cfd9b147b3c798c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="科学网的人才招聘页面"></p>
+<p>第二个例子是在Web of Science网站上搜索特定关键词相关的文献，自动获取文献的相关信息，然后分析文献摘要中的关键信息和文献所在期刊的影响因子。这个例子对应的是研究生日常工作中非常常见的一个任务：文献的调研。Web of Science作为查找文献最权威的收费数据库，是我们日常获取文献信息的主要来源，如果能够实现其中信息的自动获取分析，能够大大提高我们平时的工作效率。篇幅所限，本文将展示如何完成下面这个具体的任务：从Web of Science上获取20篇关于“Graphene”的文献信息，分析每篇文献中通信作者的单位地址，并将其在地图中展示出来。</p>
+<h2 id="案例一，招聘信息的自动获取和分析"><a href="#案例一，招聘信息的自动获取和分析" class="headerlink" title="案例一，招聘信息的自动获取和分析"></a>案例一，招聘信息的自动获取和分析</h2><h3 id="1-第一部分，从网上下载信息"><a href="#1-第一部分，从网上下载信息" class="headerlink" title="1. 第一部分，从网上下载信息"></a>1. 第一部分，从网上下载信息</h3><ol>
+<li><p>打开八爪鱼采集器，选择自定义采集。因为科学网的网页结构较为简单，也可以使用向导模式。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-300b2d2e95220396.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="选择采集模式"></p>
+</li>
+<li><p>输入我们要采集的网址：<a href="http://talent.sciencenet.cn/index.php?s=List/index/pid/G" target="_blank" rel="noopener">http://talent.sciencenet.cn/index.php?s=List/index/pid/G</a>。点击页面中的招聘条目，根据右侧的操作提示，点选同类型的链接。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-31750426f51fdfab.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="点击页面中的链接"></p>
+</li>
+<li><p>添加一个循环点击每个链接的动作，然后打开一条链接，选择页面中的对应元素，做好标注。如果想采集所有页面上的信息，可以添加翻页动作。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-83eb976287971745.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="定义采集规则、标注信息"></p>
+</li>
+<li><p>定义好规则以后我们保存任务，然后选择单机运行。</p>
+</li>
+<li><p>软件会如果定义的规则没有问题，软件将自动采集这个版块的所有照片信息。</p>
+</li>
+<li><p>这里我们采集了这个页面中的100条信息作为示例，每条信息分别包括标题、内容和发布时间、地点。</p>
+</li>
+<li><p>导出我们的数据至Excel文件。这样我们就完成了工作流程的第一部分，获得了100条招聘信息。只要我们主要软件的使用提示，一般能够很快上手。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-4e76a5671bf099ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="导出的信息"></p>
+</li>
+</ol>
+<h3 id="2-第二部分，清理与展示信息"><a href="#2-第二部分，清理与展示信息" class="headerlink" title="2. 第二部分，清理与展示信息"></a>2. 第二部分，清理与展示信息</h3><ol>
+<li><p>打开KNIME软件。KNIME软件是在Eclipse的基础上编写的，原始界面有很多子窗口，我们可以把暂时用不到的窗口关掉或者最小化，只保留最重要的工作区，节点库窗口和节点说明窗口。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-85980e0bb4225f8c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Knime窗口"></p>
+</li>
+<li><p>KNIME的工作方式是从左侧节点库中拖动节点至中间工作区，当我们点击节点的时候，右侧的节点说明窗口会显示当前节点的主要信息。一个节点图标主要由三部分组成，上方是该节点的功能说明，中间是节点图标，图标下方三个点像红绿灯一样，如果红点亮，表明该节点配置不正确或者运行错误，黄灯亮表示还未设置或者运行过，绿灯亮表明运行正常。在设置某些节点的时候，我们需要实现将它的输入端连接起来，否则无法进行配置。详细的说明可以参考软件的帮助文档。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-aa44cab6a128f550.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Knime工作区"></p>
+</li>
+<li><p>这里我们首先新建一个空白Workflow文件，从节点库中依次选择“IO-Read-Excel Reader”节点，将其拖动到工作区。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-5785769328662218.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="拖动节点到工作区"></p>
+</li>
+<li><p>双击该节点图标，会出现配置窗口。如果我们初次看到这个窗口，可能会被复杂的设置选项吓到，其实这些选择并不复杂。我们只需要关心第一个Tab“XLS Reader Settings”就行了。配置完成后我们可以点击工具栏上的运行按钮先运行该节点，在节点图标上右键可以在菜单中找到查看输出结果的选项。这种分布执行，每一步都可以查看结果的操作方式有利于初学者及时发现问题所在。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-4435d3143cfa760a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="节点配置窗口，每个节点配置界面不同"></p>
+</li>
+<li><p>在导入了数据之后就是对数据的处理了，对于我们获得招聘单位地理位置分布这个目标来说，我们这里清洗数据的目的是获得标题中的招聘单位。我们可以先使用Column Filter过滤出我们需要的列，然后使用Regex Split正则表达式工具提取出其中的单位名称。正则表达式的使用是一个较为复杂的部分，读者可能需要自行查阅资料了解。需要注意的是，KNIME使用的是Java的正则表达式语法，在这个节点中，我们将单元格中的内容用几个括号包裹的正则表达式表示出来，而每个括号中匹配到的内容会作为单独的列提取出来。我们通过“大学、学院、所”等名称来匹配单位名。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-c6ae613e47a9005a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="正则表达式"></p>
+</li>
+<li><p>由于部分招聘信息的单位比较特殊，匹配不到，所以节点中会出现一个黄色感叹号，这部分数据我们也可以通过右键菜单查看到，这里我们主要关注能够匹配到的数据。通过添加一个Row Filter行过滤节点来去掉没有匹配到的数据。</p>
+</li>
+<li><p>如果获得单位所在地理坐标呢？如果是英文地址的话，有现成的节点可以使用（详见案例二）。中文地址的话我们需要调用百度地图的Web API来进行地理编码Geocoding。这一部分主要通过Get Request节点实现。使用之前我们需要生成一个带有查询URL地址的列来供这个节点调用。这一部分的具体信息我们需要查阅百度地图API的使用文档。简单来说，就是注册账号，然后先获取一个Key，然后将单位名称加到带有Key的查询地址中。这一步操作我们需要用到String Manipulation节点，在该节点中通过Join函数将对应的列数据加到基本查询地址中。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-56ae21a7056ce135.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="String Manipulation节点，输入的函数可以调用左上角的列名作为参数"></p>
+</li>
+<li><p>执行查询后，我们先用Binary Objects to Strings节点将返回的信息编程字符串，然后通过Regex Split正则表达式工具将其中的经纬度提取出来，然后用String to Number节点转换为数字格式，这样我们就获得了每条招聘信息所对应的招聘单位地理坐标。当然，由于同一个单位可以由不同的分部，仅从标题获取的地址未必准确。</p>
+</li>
+<li><p>下面我们要做的就是把这些地理坐标在地图上标注出来了。在这之前我们需要安装Palladian节点工具包，安装方法很简单，依次打开“File”-“Install Knime Extensions”，然后在搜索框里输入Palladian，打个勾，点下一步，同意一下协议，就能自动下载安装了。</p>
+</li>
+<li><p>安装好以后，我们先使用该工具包中的LatitudeLongitudeToCoordinate节点将经纬度坐标组合起来，然后再与MapView节点连接就可以了，运行之后我们就能看到这些单位的地理分布了，放大地图还可以进一步查看细节。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-70954e5af01bfe6d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="结果展示"></p>
+</li>
+</ol>
+<h2 id="案例二，文献信息的自动获取和分析"><a href="#案例二，文献信息的自动获取和分析" class="headerlink" title="案例二，文献信息的自动获取和分析"></a>案例二，文献信息的自动获取和分析</h2><h3 id="1-第一部分，获取信息"><a href="#1-第一部分，获取信息" class="headerlink" title="1. 第一部分，获取信息"></a>1. 第一部分，获取信息</h3><p>获取信息的部分和案例一中的过程很类似，这里不再赘述，读者稍加尝试应该都可以完成。这里我以“Graphene”为关键词，并且按照被引频次从高到低排序，在“Web of Science”上爬取了20条文献信息作为示例。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-c11e813e57de7837.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="工作流及对应说明"></p>
+<h3 id="2-第二部分，清理和展示信息"><a href="#2-第二部分，清理和展示信息" class="headerlink" title="2.第二部分，清理和展示信息"></a>2.第二部分，清理和展示信息</h3><p>数据在Knime中的导入和提取与案例一类似，需要注意的是，笔者提取出的文献通信作者单位信息有好几行，只有第一行是我们需要的详细地址。这里我们可以使用Cell Splitter工具，以换行符作为区分，将每一个单元格分解到三列中去，在过滤出第一列。为了获得这些英文地址对应的GPS坐标，我们可以使用案例一中下载的Palladian工具包中的MapzenGeocoder节点，需要注意的是，在使用之前我们需要打开“FIle”-“Preferences”-“Palladian Geocoder”，从网上注册账号获取Mapzen的API Key，然后填写进去。MapzenGeocoder可以直接和Mapview连接，就可以将地理坐标在地图中展示出来了。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-8005ca1a5688e425.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="在石墨烯领域最具影响力的研究单位"><br><img src="http://upload-images.jianshu.io/upload_images/1536844-488c2c020caf63dd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="可以将发表文章的被引频次作为标签"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>八爪鱼的优点在于简单易用，而Knime在于开源强大。Knime的功能远不止上面讨论的这些，需要读者自己去探索。总的来说，这样一条工具链具有很大的想象空间，而这一空间主要体现在Knime中。Knime中提供的API查询工具，让我们可以使用网络上丰富的API工具，比如翻译、自然语言处理等等，将State of the Art的Machine Learning结合进来。事实上，Knime中已经有了专门的化学分子查询和药物筛选的工具包，只是对于大多人来说，没有这样的需求罢了。</p>
+<p>和传统的编程实现方式相比，这样一种操作方式最大的优点到还不在它的简便与否，而在于它的模块化。我们在使用Knime的时候自然会将任务进行分解，让我们自己理清楚我们需要做哪些事情，而每个节点的独立设置、执行和结果查询，让我们可以以步步为营的方式不断推进我们的工作。一旦我们实现了一个可行的工作流，就可以将它重复利用，在其中修修补补调整功能也变得很容易。</p>
+<p>当然，缺点也是不可避免的，中文学习资源的匮乏需要我们有一颗不断折腾的心。即使其功能再强大，如果我们并没有什么改变现行工作方式的迫切冲动，那也是无济于事的。不过，如果你都看到了这里，我想你应该有这种冲动。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>给博主捐赠一杯咖啡。</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Jerry Chen 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Jerry Chen 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/13/高效率科研神器——小软件、大能量/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/13/SSH入门及基础命令大全/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Jerry Chen" />
+            
+              <p class="site-author-name" itemprop="name">Jerry Chen</p>
+              <p class="site-description motion-element" itemprop="description">Live a valuable life!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/jerrynju" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chenjiarui_nju@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一种无须编程的数据搜集、分析流程"><span class="nav-number">1.</span> <span class="nav-text">一种无须编程的数据搜集、分析流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工具"><span class="nav-number">1.2.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务"><span class="nav-number">1.3.</span> <span class="nav-text">任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例一，招聘信息的自动获取和分析"><span class="nav-number">1.4.</span> <span class="nav-text">案例一，招聘信息的自动获取和分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-第一部分，从网上下载信息"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 第一部分，从网上下载信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-第二部分，清理与展示信息"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 第二部分，清理与展示信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#案例二，文献信息的自动获取和分析"><span class="nav-number">1.5.</span> <span class="nav-text">案例二，文献信息的自动获取和分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-第一部分，获取信息"><span class="nav-number">1.5.1.</span> <span class="nav-text">1. 第一部分，获取信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-第二部分，清理和展示信息"><span class="nav-number">1.5.2.</span> <span class="nav-text">2.第二部分，清理和展示信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.6.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jerry Chen</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jerry's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="文献无疑是目前科研成果的最主要载体。在大家坚持不懈地灌水努力下，现在的文献是越来越多，大有涛涛江河汇成大海之势。然而，怎样才能在大海里畅游而不迷失方向？怎样才能在海里钓到大鱼呢？今天我就来介绍一下我个人的经验。 #1. Readcube——最好的文献管理器  Readcube是近乎完美的文献管理器，如果没有墙而你又是付费用户的话，它会更完美。 获取地址：https://www.readcube.c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jerry&#39;s Blog">
+<meta property="og:url" content="https://jerrynju.github.io/2018/01/13/高效率科研神器——驾驭文献洪流/index.html">
+<meta property="og:site_name" content="Jerry&#39;s Blog">
+<meta property="og:description" content="文献无疑是目前科研成果的最主要载体。在大家坚持不懈地灌水努力下，现在的文献是越来越多，大有涛涛江河汇成大海之势。然而，怎样才能在大海里畅游而不迷失方向？怎样才能在海里钓到大鱼呢？今天我就来介绍一下我个人的经验。 #1. Readcube——最好的文献管理器  Readcube是近乎完美的文献管理器，如果没有墙而你又是付费用户的话，它会更完美。 获取地址：https://www.readcube.c">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-2e68309b8e9811f2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-64e99604d44db66e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-b6c6bf7d47d9be07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-08f7f88b3574f5aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-710428de38a36a09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-befcc978fd9bff78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-0f699c9fa870ad39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-0ff2dabbe2945ab9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-e7d44b9e86692cf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-5f0d45f8e5a03dd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-5720c381c23b2542.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-249acefe9709cb24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-d7abbced3a7a5515.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-5ebc67a1cc7ada2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-03da435ccd35da82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-03400037d2f34730.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-a448c6cafc84f269.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-2ff31a98bcdda849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-37b1c072fbc5d7d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-ffacafe346209485.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-1e4de602dff600c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1536844-594ba716f243c6dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-01-13T08:26:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jerry&#39;s Blog">
+<meta name="twitter:description" content="文献无疑是目前科研成果的最主要载体。在大家坚持不懈地灌水努力下，现在的文献是越来越多，大有涛涛江河汇成大海之势。然而，怎样才能在大海里畅游而不迷失方向？怎样才能在海里钓到大鱼呢？今天我就来介绍一下我个人的经验。 #1. Readcube——最好的文献管理器  Readcube是近乎完美的文献管理器，如果没有墙而你又是付费用户的话，它会更完美。 获取地址：https://www.readcube.c">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1536844-2e68309b8e9811f2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://jerrynju.github.io/2018/01/13/高效率科研神器——驾驭文献洪流/"/>
+
+
+
+
+
+  <title> | Jerry's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jerry's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Jerry的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jerrynju.github.io/2018/01/13/高效率科研神器——驾驭文献洪流/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jerry Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jerry's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T16:27:04+08:00">
+                2018-01-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://upload-images.jianshu.io/upload_images/1536844-2e68309b8e9811f2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打造你个人的科研工作流"><br>文献无疑是目前科研成果的最主要载体。在大家坚持不懈地<del>灌水</del>努力下，现在的文献是越来越多，大有涛涛江河汇成大海之势。然而，怎样才能在大海里畅游而不迷失方向？怎样才能在海里钓到大鱼呢？今天我就来介绍一下我个人的经验。</p>
+<p>#1. Readcube——最好的文献管理器</p>
+<blockquote>
+<p>Readcube是近乎完美的文献管理器，如果没有墙而你又是付费用户的话，它会更完美。</p>
+<p><strong>获取地址：<a href="https://www.readcube.com/home?r_c=YH1En" target="_blank" rel="noopener">https://www.readcube.com/home?r_c=YH1En</a></strong></p>
+</blockquote>
+<p>文献管理器是阅读和管理文献的核心，因而选择一款好用的文献管理器十分重要。目前主流的选择包括<a href="https://www.readcube.com/home?r_c=YH1En" target="_blank" rel="noopener"><strong>ReadCube</strong></a>, <a href="https://www.mendeley.com/" target="_blank" rel="noopener"><strong>Mendeley</strong></a>和<a href="http://endnote.com/" target="_blank" rel="noopener"><strong>Endnote</strong></a>。根据笔者自己的实际使用体验，这几种文献管理软件中最好的是Readcube。无论从美观程度、功能性、平台覆盖面上都有碾压其他软件的势头，缺点是略微有点卡顿。下面我来具体介绍一下它的主要功能和特色。</p>
+<p>#####Enhanced PDF——PDF文件自动识别和强化<br>目前几乎所有的文献都是以PDF格式存在，对PDF文件的处理方式和识别能力直接决定了一款文献管理软件的好坏，而ReadCube的杀手锏正是PDF自动识别。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-64e99604d44db66e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ReadCube主界面"></p>
+<p>当我们从期刊网站或者课题组主页上下载了某篇文件的PDF文件之后，通过Readcube的导入按钮，将文献拖动到Readcube界面或者直接定位到文献所在文件夹，就可以将PDF文件批量导入Readcube。一旦导入，Readcube就会自动识别文献的具体信息。识别成功的文献会在软件界面右侧显示文献的信息，包括期刊、编号、标题、作者、摘要等等。甚至会显示该文献的引用量。这样，你的文献就不再只是以PDF文件的形式存在，而是以信息完备，分类详细的数据库的形式存在。管理将更为方便。你还可以选择将数据库中的文献自动按照作者、发表时间或者标题进行重命名，重新保存到指定文件夹中。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-b6c6bf7d47d9be07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ReadCube导入界面"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-08f7f88b3574f5aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="自动识别成功的文献信息页"></p>
+<p>点击阅读按钮，我们可以打开增强后的PDF文件。文献中的所有作者姓名和参考文献的引用上标都变成了可以点击的状态，点击之后，可以直接跳转到该引用文献的下载界面或者作者主页。而右侧的一系列选项卡除了提供了参考文献列表以外，还提供了很多非常有用的功能。比如Metrics选项卡，以图表形式给出了该文献的引用数随时间的变化。下方给出了具体的引用文献，直接点击就可以下载。它甚至还能给出其他引用文献引用该文献时的具体描述。这一功能简直是科研工作者做梦都想要的功能。当我们找到一篇我们感兴趣的重要文献时，只需要结合ReadCube提供的引用和被引用文献列表，就能够非常迅速的勾勒出一个文献网络，一旦在这个网络中发现其他感兴趣的文献，只需要一次点击（在你的学校购买了相关数据库的情况下），ReadCube就能够自动帮你从学校代理连接到期刊网站，甚至能自动帮你下载好，放入你的数据库。理想情况下，全程不需要任何额外操作。文献查找和下载的效率得到了极大的提升。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-710428de38a36a09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ReadCube增强后的文献阅读界面"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-befcc978fd9bff78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="点击PDF文件中的作者名可自动显示地址和谷歌学术链接"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-0f699c9fa870ad39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="点击文献中的引用编号可自动显示对应的文献信息，点击卡片即可自动下载该文献"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-0ff2dabbe2945ab9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Metrics选项卡"></p>
+<p>Files选项卡给出了PDF文件在电脑中储存的位置，更重要的是，如果该文献有Supporting Information，即使你没有下载，Readcube也能够在这个选项卡中显示，点击后就可以直接下载。而Cite选项卡则让你能够导出文献各种格式的引用，方便在Word、PPT等软件中插入。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-e7d44b9e86692cf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Files选项卡"></p>
+<p>#####Recommendations——推荐功能<br>Readcube另一个核心功能是自动化推荐，它能够根据你文件库中已有的文献自动计算出你感兴趣的文献，推荐给你，同样只需要简单点击就可以下载。而且它可以根据你导入文献时创建的文件夹，针对性地推荐某一特定类别和特定时间段的文献给你。这样你就不需要费时费力地到网上检索了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-5f0d45f8e5a03dd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ReadCube的文献推荐功能"></p>
+<p>#####All Platforms——全平台特性<br>相对于其他文献管理软件，Readcube的全平台同步特性非常强大。它几乎覆盖所有平台，包括Web、PC、Mac、iPad、Android等等。而且在各个平台上，Readcube的使用体验几乎一致，功能性并没有损失。在网页版上，Readcube还能够自动列出文献中的图片和图片标注，方便在阅读文献时定位到提及的图片。</p>
+<p>#####Readcube Web Importor——Chrome插件<br>Readcube Web Importor是Readcube新出的Chrome插件，付费用户才能使用。通常，文献需要将PDF文件下载下来，再导入软件中才能够进行管理，这个插件通过在浏览器中提供入口，将这一过程进一步简化。当你打开Google Scholar或者Pubmed的时候，它会在页面中的每个搜索结果后面直接加上一个按钮，点击以后可以直接将结果加入Readcube数据库。而点击插件栏上的按钮，插件将自动识别搜索结果中的文献，你可以通过勾选你感兴趣的结果，将文献直接批量加入Readcube数据库中。这样，你连下载PDF的时间都省了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-5720c381c23b2542.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="谷歌学术搜索结果词条旁的按钮"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-249acefe9709cb24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="在谷歌学术界面和Pubmed界面可自动识别页面中的文献"></p>
+<p>#####关于付费功能<br>Readcube的全平台同步和Metrics功能是需要购买按年付费的高级版的，高级版还提供一个付费功能是监控特定文件夹，有新文件后自动导入。新用户可以获得3个月高级版的免费试用，推荐十个人使用Readcube的话还可以获得一年高级版。Readcube高级版的正常价格是55美金一年，但是黑色星期五之类的促销季会打折。至于值不值，各位自己衡量啦。</p>
+<p>#2. Google图片——进行直观的发散式搜索</p>
+<p>很少有人会喜欢阅读满屏幕的英文，尤其当这些英文中还夹杂着很多字典也查不出来的专业词汇的时候。但是图片却不一样。优秀的学术文章大多会有简洁美观的示意图。通常情况下，看到这些图片，你就能够大致明白文献的主题。人脑的强大之处在于形象思维和抽象能力。通常情况下，人们更能够从满屏幕的图片而不是满屏幕的文字中发现相关信息。从这一点出发，我自创了一种快速查找文献的方法，那就是利用Google图片。Google图片搜索的优良算法能够很好的将相关或者近似领域的搜索结果显示到一起。而且针对单一图片，能够进一步展示类似图片。并且，相对于其他搜索引擎，我个人感觉，Google给予学术结果的权重更大。<br>下面我们以<strong>Self-assembly</strong>为例，来看看怎么利用Google图片搜索学术资料。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-d7abbced3a7a5515.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="关键词**Self-assembly**的Google图片搜索结果"></p>
+<p>我们可以看到搜索结果基本都是简洁明了的学术文献的示意图。大部分图片我们不需要看注释文字就可以大致猜出它要表示的内容。点击排在前面的一幅图片，这幅图片来自nature网站，图片标题下方给出了图片的文字描述，我们可以根据描述进一步理解图片表达的意思。而文字描述下方，<strong>Related images</strong>给出了类似的其他图片，我们不需要离开当前页面就可以进一步查看。而点击<strong>View More</strong>，我们就可以查找和当前图片相关的其他图片，注意，这时候新的搜索是以图片为基础，而不需要输入关键词，也就是说Google可以根据你感兴趣的图片自动帮你联想关键词。这样你就不要煞费脑汁的去思考用什么英文单词来搜索了。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-5ebc67a1cc7ada2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="点击某一图片之后出现的图片具体信息和相关图片推荐"></p>
+<p>这一系列看似简单的功能，实际上使得我们能够以一两个关键词为出发点，极其方便的构建一个庞大的搜索网络，而整个过程中，所有结果都是以图片形式呈现，你甚至不需要输入文字，只需要点击鼠标就行了。你所有的注意力只需要集中到对图片想要表达意思的抽象判断上。这无疑让查找文献的过程变得极为高效和简化。</p>
+<p>#####相关插件<br>搜索结果图片中，前面的一排方形文字是安装了<a href="https://chrome.google.com/webstore/detail/%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2%E4%BC%98%E5%8C%96/acloboabliakhacdiffnnhgoodppnifj" target="_blank" rel="noopener">Chrome谷歌搜索优化插件</a>之后显示的关键词进一步精确化的建议，它能将原来网页搜索结果上方的搜索建议进一步细化，并且以更美观的形式呈现出来，同时以相同颜色表示相同类别的关键词，方便识别。<br><img src="http://upload-images.jianshu.io/upload_images/1536844-03da435ccd35da82.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="安装了插件之后经过美化的搜索建议"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-03400037d2f34730.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="安装了插件之后经过美化的搜索建议"></p>
+<p>同时推荐安装<a href="https://chrome.google.com/webstore/detail/power-zoom-zoom-images-wi/jlioidldolgbmanndggdnldambdlglgj?utm_source=InfinityNewtab" target="_blank" rel="noopener">Power Zoom</a>图片放大插件，按下<strong>Ctrl</strong>键，鼠标移过图片的同时可显示该图片的全尺寸放大图。</p>
+<p>#3. 文献订阅<br>自从被Google抛弃之后，RSS订阅服务似乎渐趋没落，使用者越来越少。但是由于科研领域的特殊性，RSS在科研领域还是有它的用武之地，尤其是在文献推荐方面。这里，我介绍两个新颖的RSS文献推荐和订阅服务。</p>
+<p>###一览阅读——新时代的最佳RSS阅读器之一</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-a448c6cafc84f269.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一览阅读主界面"></p>
+<p>作为一款本土应用，一览是一个令人欣慰的存在。它界面简洁美观，提供瀑布流式的浏览方式。而且它自带颇为丰富的订阅源，除了可以订阅专业学术期刊网站外，还可以订阅很多泛科学领域的知名网站，如知乎、果壳等。可以说是目前国内RSS阅读器最好的选择之一。</p>
+<p>###SciReader</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-2ff31a98bcdda849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="SciReader主界面"><br><a href="http://www.scireader.org/" target="_blank" rel="noopener"><strong>SciReader</strong></a>是专注于学术领域的免费文献个性化推荐服务。它的主页面提供三个基本功能，一个是根据你设置的关键词和兴趣领域推荐相关的最新文献给你，可以自动发送到你的邮箱，第二个是在tweeter上讨论最多的文献，第三个是来自Science Daily上的学术新闻。见面美观简洁，功能实用，是一个值得考虑的服务。</p>
+<p>#4. 浏览器插件<br>除了独立的网站和软件之外，有一些优秀的浏览器插件也能够给我们的学术生活带来很大便利。</p>
+<p>###Wiki2 or Wikiwand<br>Wiki2 和 Wikiwand 都是维基百科美化和功能增强插件。维基百科是目前最为庞大的网络百科全书，储藏了海量的知识，但是界面却略显简陋。这两个插件的主要作用是给维基百科穿上漂亮的衣服，同时提供链接预览、页面收藏等增强功能。两者的界面风格几乎是两个极端。Wikiwand是灰白色调为主的现代风格，提供平板和手机客户端，而Wiki2非常绚丽多彩，并且，Wiki2在每个维基页面还集成了Youtube搜索功能，能自动在维基百科页面中插入相关的Youtube视频。笔者个人更喜欢Wiki2。萝卜白菜各有所爱，各位自己选择一个更顺眼的吧。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-37b1c072fbc5d7d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="经过Wiki2美化后的维基百科界面"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-ffacafe346209485.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Wikiwand的网页和手机界面"></p>
+<p>###Google学术搜索按钮<br>这个插件是谷歌公司官方出品的，功能非常实用。当你打开某个期刊的文献页面的时候，点击这个插件的按钮，它能够自动显示页面中文献的谷歌学术搜索结果。如果有免费的PDF提供，就会有一个绿色按钮，点击即可免费下载文献，不需要你的学校购买相关的数据库。点击引号还可以直接输出参考文献的引用，非常方便。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-1e4de602dff600c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="插件在Science上的效果"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1536844-594ba716f243c6dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="插件在谷歌学术上的效果"></p>
+<p>#5. 写在后面</p>
+<p>###必要的硬件升级<br>如果你的电脑还用着2G内存和机械硬盘，那么这篇文章其实对你不会有太大帮助。因为相对于优秀软件带来的便利，更多的时候，你得忍受令人不悦的卡顿。如果你无法保持一个愉悦的心情，效率的提升就无从谈起。我强烈推荐你升级到8G以上内存，并且至少将系统盘换成SSD。即使你的老板很抠门，需要你自己掏这笔钱（500元以内）。<br>另外，如果你需要经常码字，我推荐你给自己装备一个机械键盘，它能让你爱上打字的感觉。如果你是土豪的话，直接上Filco吧。</p>
+<p>###付费软件的价值<br>大部分好的软件是免费的，但是它们的增值服务是收费的。这也是绝大部分优秀软件公司的生存方式。中国用户在使用这些软件的时候，很少考虑购买增值服务。也有一些即使有购买的意愿，也会受到支付渠道的限制。虽然不是每个人都需要增值服务，但是我希望当你真的需要的时候，不要犹豫。</p>
+<p>###科学上网<br>有一点无法否认，那就是目前科技创新和科学研究的第一大国是美国。本文中介绍的很多软件是美国公司开发的，然而由于众所周知的原因，某些时候你无法正常的使用这些软件。尤其在这些软件中内置了Google的服务的时候。所以备好一把好用的梯子是十分重要的。这样你就不必在急于访问一些网站的时候面对打不开的页面抓狂。<br>关于梯子的选择，目前最快最稳定的方式是ShadowSocks，全平台覆盖，电脑端可以全局fanqiang，并且速度很快，甚至可以看Youtube高清直播。可惜SS一般需要购买付费账号，约一两百一年。如果你有相关的需求，可以考虑购买一个，能够省去很多烦恼。为了避免广告嫌疑，这里就不提供相关地址了。至于免费的服务则有很多，然而由于GFW<em>自强不息</em>的技术更新，往往不能长期保持有效，目前最有效的是XX-net和Lantern。</p>
+<blockquote>
+<p>相关文章推荐</p>
+<ul>
+<li><a href="http://www.jianshu.com/p/d09838e9b72c" target="_blank" rel="noopener">高效率科研神器——Build your organizing creativity</a></li>
+<li><a href="http://www.jianshu.com/p/f411bcf5d664" target="_blank" rel="noopener">高效率科研神器——小软件、大能量</a></li>
+<li><a href="http://www.jianshu.com/p/851100273d7a" target="_blank" rel="noopener">世上最强大的科研工具手册</a></li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>给博主捐赠一杯咖啡。</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Jerry Chen 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Jerry Chen 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/13/【转载】在不违反法律的前提下，我们可以选择做一个坏人吗？/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/13/普通人的知识管理和软件应用技巧/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Jerry Chen" />
+            
+              <p class="site-author-name" itemprop="name">Jerry Chen</p>
+              <p class="site-description motion-element" itemprop="description">Live a valuable life!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/jerrynju" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:chenjiarui_nju@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jerry Chen</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
