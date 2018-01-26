@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jerrynju.github.io/"/>
-  <updated>2018-01-15T01:44:31.045Z</updated>
+  <updated>2018-01-14T11:36:45.939Z</updated>
   <id>https://jerrynju.github.io/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test.md</title>
-    <link href="https://jerrynju.github.io/2018/01/14/test-md/"/>
-    <id>https://jerrynju.github.io/2018/01/14/test-md/</id>
-    <published>2018-01-14T10:43:49.000Z</published>
-    <updated>2018-01-15T01:44:31.045Z</updated>
-    
-    <content type="html"><![CDATA[<p>行间公式<br>$$<br>J(\theta) = \frac 1 2 \sum<em>{i=1}^m (h</em>\theta(x^{(i)})-y^{(i)})^2<br>$$<br>行内公式<br>$y=x^2_p$</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;行间公式&lt;br&gt;$$&lt;br&gt;J(\theta) = \frac 1 2 \sum&lt;em&gt;{i=1}^m (h&lt;/em&gt;\theta(x^{(i)})-y^{(i)})^2&lt;br&gt;$$&lt;br&gt;行内公式&lt;br&gt;$y=x^2_p$&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>关于英语学习的思考</title>
@@ -57,6 +35,28 @@
       <category term="英语" scheme="https://jerrynju.github.io/tags/%E8%8B%B1%E8%AF%AD/"/>
     
       <category term="学习" scheme="https://jerrynju.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test.md</title>
+    <link href="https://jerrynju.github.io/2018/01/14/test-md/"/>
+    <id>https://jerrynju.github.io/2018/01/14/test-md/</id>
+    <published>2018-01-14T10:43:49.000Z</published>
+    <updated>2018-01-19T13:43:20.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>公式测试：\( y=x^2 \)<br>行间公式<br>$J(\theta) = \frac 1 2 \sum<em>{i=1}^m (h</em>\theta(x^{(i)})-y^{(i)})^2$<br>行内公式$y=x^2$</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;公式测试：\( y=x^2 \)&lt;br&gt;行间公式&lt;br&gt;$J(\theta) = \frac 1 2 \sum&lt;em&gt;{i=1}^m (h&lt;/em&gt;\theta(x^{(i)})-y^{(i)})^2$&lt;br&gt;行内公式$y=x^2$&lt;/p&gt;
+
+      
+    
+    </summary>
+    
     
   </entry>
   
