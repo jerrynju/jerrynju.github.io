@@ -3,6 +3,15 @@
   
     
     <entry>
+      <title><![CDATA[test.md]]></title>
+      <url>/2018/01/14/test-md/</url>
+      <content type="html"><![CDATA[<p>公式测试：\( y=x^2 \)<br>行间公式<br>$J(\theta) = \frac 1 2 \sum<em>{i=1}^m (h</em>\theta(x^{(i)})-y^{(i)})^2$<br>行内公式$y=x^2$</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于英语学习的思考]]></title>
       <url>/2018/01/14/%E5%AF%B9%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%BC%8F%E7%9A%84%E6%80%9D%E8%80%83/</url>
       <content type="html"><![CDATA[<h2 id="特殊的学科"><a href="#特殊的学科" class="headerlink" title="特殊的学科"></a>特殊的学科</h2><p>英语是一门很特殊的学科，正如著名语言学家Greg Thomson所说：“外语学习的原理是如此之复杂，以至于没有人能说清楚；但掌握语言的过程又是如此之简单，以至于不需要说清楚。”人们乐此不疲的耗费着大量的时间去学习英语。对英语的热衷覆盖了人生的各个阶段。在学校里上学的时段自不必说，英语是与语文、数学并列的三大主课之一。往前推，各式各样的少儿英语培训热火朝天，家长们恨不得从小孩一出生就开始学英语。往后推，考研、考博、出国留学必然是离不开英语，就连已经工作的职场人士也有英孚之类的针对性培训机构。学习时间跨度如此之长的学科恐怕找不到第二个。然而大多数人的学习效率是非常低的。正如很多大学生自嘲，高考结束的那天是自己一生中英语水平最高的时刻。为什么在英语这门学科身上有这么多矛盾，甚至荒诞的现象？本文试着做一些严肃的分析。</p>
@@ -55,15 +64,6 @@
             <tag> 学习 </tag>
             
         </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[test.md]]></title>
-      <url>/2018/01/14/test-md/</url>
-      <content type="html"><![CDATA[<p>公式测试：\( y=x^2 \)<br>行间公式<br>$J(\theta) = \frac 1 2 \sum<em>{i=1}^m (h</em>\theta(x^{(i)})-y^{(i)})^2$<br>行内公式$y=x^2$</p>
-]]></content>
-      
         
     </entry>
     
