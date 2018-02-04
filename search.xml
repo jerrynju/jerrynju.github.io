@@ -36,7 +36,7 @@
     <entry>
       <title><![CDATA[《深入浅出WPF》学习笔记——XAML详解]]></title>
       <url>/2018/01/31/XAML/</url>
-      <content type="html"><![CDATA[<div class="note warn"><p>本文主要内容整理自水利水电出版社刘铁猛著《深入浅出WPF》一书</p></div>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <div=""><p>本文主要内容整理自水利水电出版社刘铁猛著《深入浅出WPF》一书</p></div>
 <h1 id="XAML"><a href="#XAML" class="headerlink" title="XAML"></a>XAML</h1><h2 id="XAML基础"><a href="#XAML基础" class="headerlink" title="XAML基础"></a>XAML基础</h2><p>XAML全称Extensible Application Markup Language，是一种用来描述图形用户界面的标记语言。它的目的是实现程序视图和逻辑代码之间的解耦。</p>
 <p>XAML是一种“声明”式的语言，当我们见到一个标签，就意味着声明了一个对象，对象之间的关系要么是并列，要么是包含。</p>
 <a id="more"></a>
@@ -278,13 +278,13 @@
 <li>自动值：字符串Auto。</li>
 </ul>
 <h3 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Grid</span> <span class="attr">Margin</span>=<span class="string">"10"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Grid.ColumnDefinitions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ColumnDefinition</span> <span class="attr">Width</span>=<span class="string">"Auto"</span> <span class="attr">MinWidth</span>=<span class="string">"120"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ColumnDefinition</span> <span class="attr">Width</span>=<span class="string">"*"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ColumnDefinition</span> <span class="attr">Width</span>=<span class="string">"80"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ColumnDefinition</span> <span class="attr">Width</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ColumnDefinition</span> <span class="attr">Width</span>=<span class="string">"80"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Grid.ColumnDefinitions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">"25"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">"*"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RowDefinition</span> <span class="attr">Height</span>=<span class="string">"25"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Grid.RowDefinitions</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextBlock</span> <span class="attr">Text</span>=<span class="string">"请选择您的部门并留言："</span> <span class="attr">Grid.Column</span>=<span class="string">"0"</span> <span class="attr">Grid.Row</span>=<span class="string">"0"</span> <span class="attr">VerticalAlignment</span>=<span class="string">"Center"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ComboBox</span> <span class="attr">Grid.Column</span>=<span class="string">"1"</span> <span class="attr">Grid.Row</span>=<span class="string">"0"</span> <span class="attr">Grid.ColumnSpan</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextBox</span> <span class="attr">Grid.Column</span>=<span class="string">"0"</span> <span class="attr">Grid.Row</span>=<span class="string">"2"</span> <span class="attr">Grid.ColumnSpan</span>=<span class="string">"5"</span> <span class="attr">BorderBrush</span>=<span class="string">"Black"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Content</span>=<span class="string">"提交"</span> <span class="attr">Grid.Column</span>=<span class="string">"2"</span> <span class="attr">Grid.Row</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Content</span>=<span class="string">"清除"</span> <span class="attr">Grid.Column</span>=<span class="string">"4"</span> <span class="attr">Grid.Row</span>=<span class="string">"4"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="/XAML-01.png" alt="XAML-01"></p>
+<p><a href="/XAML-01.png" title="XAML-01" class="gallery-item"><img src="/XAML-01.png" alt="XAML-01"></a></p>
 <h3 id="StackPanel"><a href="#StackPanel" class="headerlink" title="StackPanel"></a>StackPanel</h3><ul>
 <li>三个属性：Orientation，HorizontalAlignment，VerticalAlignment。</li>
 <li>其中某一条目变动后，其后的条目会自动移动。</li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">GroupBox</span> <span class="attr">Header</span>=<span class="string">"请选择没有错别字的成语"</span> <span class="attr">BorderBrush</span>=<span class="string">"Black"</span> <span class="attr">Margin</span>=<span class="string">"5"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Margin</span>=<span class="string">"5"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">CheckBox</span> <span class="attr">Content</span>=<span class="string">"A. 迫不及待"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">CheckBox</span> <span class="attr">Content</span>=<span class="string">"B. 迫不及待"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">CheckBox</span> <span class="attr">Content</span>=<span class="string">"C. 迫不及待"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">CheckBox</span> <span class="attr">Content</span>=<span class="string">"D. 迫不及待"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">CheckBox</span> <span class="attr">Content</span>=<span class="string">"E. 迫不及待"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">StackPanel</span> <span class="attr">Orientation</span>=<span class="string">"Horizontal"</span> <span class="attr">HorizontalAlignment</span>=<span class="string">"Right"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Content</span>=<span class="string">"清空"</span> <span class="attr">Width</span>=<span class="string">"60"</span> <span class="attr">Margin</span>=<span class="string">"5"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">Button</span> <span class="attr">Content</span>=<span class="string">"确定"</span> <span class="attr">Width</span>=<span class="string">"60"</span> <span class="attr">Margin</span>=<span class="string">"5"</span>/&gt;</span> </span><br><span class="line">            <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">StackPanel</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">GroupBox</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="/XAML-02.png" alt="XAML-02"></p>
+<p><a href="/XAML-02.png" title="XAML-02" class="gallery-item"><img src="/XAML-02.png" alt="XAML-02"></a></p>
 <h3 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h3><p>Canvas的使用场合：</p>
 <ul>
 <li>一经设计就基本不会再改动的小型布局（如图标）。</li>
@@ -297,7 +297,7 @@
 <li>DockPanel具有一个LastChildFill属性，默认值为True，作用是使用最后一个元素填充所有剩余空间。</li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Grid</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">DockPanel</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextBox</span> <span class="attr">DockPanel.Dock</span>=<span class="string">"Top"</span> <span class="attr">Height</span>=<span class="string">"25"</span> <span class="attr">BorderBrush</span>=<span class="string">"Black"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextBox</span> <span class="attr">DockPanel.Dock</span>=<span class="string">"Left"</span> <span class="attr">Width</span>=<span class="string">"150"</span> <span class="attr">BorderBrush</span>=<span class="string">"Black"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextBox</span> <span class="attr">BorderBrush</span>=<span class="string">"Black"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">DockPanel</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Grid</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="/XAML-03.png" alt="XAML-03"></p>
+<p><a href="/XAML-03.png" title="XAML-03" class="gallery-item"><img src="/XAML-03.png" alt="XAML-03"></a></p>
 <h3 id="WrapPanel"><a href="#WrapPanel" class="headerlink" title="WrapPanel"></a>WrapPanel</h3><ul>
 <li>WrapPanel内部采用流失布局，在流延伸方向上排列尽可能多的空间，排不下的会新起一行。</li>
 <li>Orientation属性控制延伸方向，HorizonalAlignment和VerticalAlignment控制内部对齐。</li>
@@ -336,7 +336,12 @@
 <li>Binding的属性”Mode”控制数据流向，可枚举的值为：TwoWay、OneWay、OnTime、OneWayToSource和Default。</li>
 <li>Binding的属性”UpdateSourceTrigger”控制Binding的数据更新，可枚举的值为：PropertyChanged、LostFocus、Explicit和Default。</li>
 </ul>
-]]></content>
+<script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       
         <categories>
             
@@ -360,7 +365,7 @@
     <entry>
       <title><![CDATA[Teaching Notes of AP-Calculus]]></title>
       <url>/2018/01/30/AP-Calculus/</url>
-      <content type="html"><![CDATA[<p>AP微积分考试的相关内容，持续更新中<br><a id="more"></a></p>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p="">AP微积分考试的相关内容，持续更新中<br><a id="more"></a><p></p>
 <h1 id="考试要求"><a href="#考试要求" class="headerlink" title="考试要求"></a>考试要求</h1><h2 id="AB"><a href="#AB" class="headerlink" title="AB"></a>AB</h2><h3 id="Ⅰ-掌握好下面的基础知识-Basic-Facts"><a href="#Ⅰ-掌握好下面的基础知识-Basic-Facts" class="headerlink" title="Ⅰ.掌握好下面的基础知识(Basic Facts)"></a>Ⅰ.掌握好下面的基础知识(Basic Facts)</h3><ul>
 <li>基本初等函数(Common Functions)的导数(Derivatives)和不定积分(Antiderivatives)；</li>
 <li>导数的积(Product)、导数的商(Quotient)和导数的链式法则(Chain Rules)；</li>
@@ -409,8 +414,7 @@
 <li>确定幂级数的收敛区间(The Interval of Convergence)；</li>
 <li>估算级数的误差边界(Bounds on the Error)。</li>
 </ul>
-<h1 id="词汇表"><a href="#词汇表" class="headerlink" title="词汇表"></a>词汇表</h1><div class="table-container">
-<table>
+<h1 id="词汇表"><a href="#词汇表" class="headerlink" title="词汇表"></a>词汇表</h1><table>
 <thead>
 <tr>
 <th style="text-align:left">英文</th>
@@ -1352,13 +1356,17 @@
 </tr>
 </tbody>
 </table>
-</div>
 <h1 id="计算器的使用"><a href="#计算器的使用" class="headerlink" title="计算器的使用"></a>计算器的使用</h1><h2 id="使用规定"><a href="#使用规定" class="headerlink" title="使用规定"></a>使用规定</h2><ol>
 <li>考生必须持用美国大学委员会(The College Board)规定的图形计算器参加考试。</li>
 <li>允许考生携带两台图形计算器，但不允许在考场上借用其它同学的图形计算器。</li>
 <li>图形计算器记忆器中存储的数据和程序进入考场前清空。下表带星（*）号的图形计算器型号内置了记忆功能。</li>
 </ol>
-<h2 id="计算器模拟软件"><a href="#计算器模拟软件" class="headerlink" title="计算器模拟软件"></a>计算器模拟软件</h2>]]></content>
+<h2 id="计算器模拟软件"><a href="#计算器模拟软件" class="headerlink" title="计算器模拟软件"></a>计算器模拟软件</h2></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>]]></content>
       
         <categories>
             
@@ -1400,10 +1408,10 @@ your browser does not support the video tag
 <h1 id="居中引用"><a href="#居中引用" class="headerlink" title="居中引用"></a>居中引用</h1><!-- 标签别名 -->
 <blockquote class="blockquote-center"><p>blah blah blah </p>
 </blockquote>
-<h1 id="插入交互式echarts图形"><a href="#插入交互式echarts图形" class="headerlink" title="插入交互式echarts图形"></a>插入交互式echarts图形</h1><div id="echarts3281" style="width: 81%;height: 400px;margin: 0 auto"></div>
+<h1 id="插入交互式echarts图形"><a href="#插入交互式echarts图形" class="headerlink" title="插入交互式echarts图形"></a>插入交互式echarts图形</h1><div id="echarts1592" style="width: 81%;height: 400px;margin: 0 auto"></div>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3281'));
+        var myChart = echarts.init(document.getElementById('echarts1592'));
 
         // 指定图表的配置项和数据
         var option = {
