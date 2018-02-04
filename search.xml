@@ -16,7 +16,7 @@
       
         <categories>
             
-            <category> Photos </category>
+            <category> photos </category>
             
         </categories>
         
@@ -1408,10 +1408,10 @@ your browser does not support the video tag
 <h1 id="居中引用"><a href="#居中引用" class="headerlink" title="居中引用"></a>居中引用</h1><!-- 标签别名 -->
 <blockquote class="blockquote-center"><p>blah blah blah </p>
 </blockquote>
-<h1 id="插入交互式echarts图形"><a href="#插入交互式echarts图形" class="headerlink" title="插入交互式echarts图形"></a>插入交互式echarts图形</h1><div id="echarts1592" style="width: 81%;height: 400px;margin: 0 auto"></div>
+<h1 id="插入交互式echarts图形"><a href="#插入交互式echarts图形" class="headerlink" title="插入交互式echarts图形"></a>插入交互式echarts图形</h1><div id="echarts5667" style="width: 81%;height: 400px;margin: 0 auto"></div>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts1592'));
+        var myChart = echarts.init(document.getElementById('echarts5667'));
 
         // 指定图表的配置项和数据
         var option = {
@@ -1494,7 +1494,7 @@ st->op1(right)->cond
 cond(yes, right)->c2
 cond(no)->sub1(left)->op1
 c2(yes)->io->e
-c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+c2(no)->op2->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
