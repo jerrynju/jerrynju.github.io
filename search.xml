@@ -3,17 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[高效能人士的七个习惯]]></title>
+      <url>/2018/02/10/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF/</url>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <="" div=""><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script></div>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[C# 高级编程]]></title>
       <url>/2018/02/05/Csharp-%E5%92%8C-dotNet/</url>
       <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p="">进度表：<p></p>
 <ul>
-<li style="list-style: none"><input type="checkbox"> C# 语言</li>
+<li style="list-style: none"><input type="checkbox" checked> C# 语言</li>
 <li style="list-style: none"><input type="checkbox"> .NET Core 和 Windows Runtime</li>
 <li style="list-style: none"><input type="checkbox"> Windows 应用程序</li>
 <li style="list-style: none"><input type="checkbox"> Web 应用程序和服务</li>
 </ul>
 <a id="more"></a>
-<h2 id="NET框架"><a href="#NET框架" class="headerlink" title=".NET框架"></a>.NET框架</h2><h3 id="NET、Common-Language-Runtime-CLR-、C-和-Visual-Studio版本关系表"><a href="#NET、Common-Language-Runtime-CLR-、C-和-Visual-Studio版本关系表" class="headerlink" title=".NET、Common Language Runtime (CLR) 、C# 和 Visual Studio版本关系表"></a>.NET、Common Language Runtime (CLR) 、C# 和 Visual Studio版本关系表</h3><table>
+<h1 id="第一部分-C-语言"><a href="#第一部分-C-语言" class="headerlink" title="第一部分 C#语言"></a>第一部分 C#语言</h1><h2 id="NET框架"><a href="#NET框架" class="headerlink" title=".NET框架"></a>.NET框架</h2><h3 id="NET、Common-Language-Runtime-CLR-、C-和-Visual-Studio版本关系表"><a href="#NET、Common-Language-Runtime-CLR-、C-和-Visual-Studio版本关系表" class="headerlink" title=".NET、Common Language Runtime (CLR) 、C# 和 Visual Studio版本关系表"></a>.NET、Common Language Runtime (CLR) 、C# 和 Visual Studio版本关系表</h3><table>
 <thead>
 <tr>
 <th>.NET</th>
@@ -403,7 +416,198 @@
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">warning</span> "遇到后显示此文本，会继续编译。"</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">error</span> "遇到后显示此文本，退出编译。"</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将代码视为给定名称的块</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">region</span> Name</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endregion</span></span></span><br></pre></td></tr></table></figure>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//改变编译器输出信息中的文件名和行号</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">line</span> 163 "Core.cs"</span></span><br><span class="line">...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">line</span> default</span></span><br><span class="line">  </span><br><span class="line"><span class="comment">//用于抑制或还原指定编译警告</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> <span class="meta-keyword">warning</span> disable 169</span></span><br><span class="line">  ...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> <span class="meta-keyword">warning</span> restore 169</span></span><br></pre></td></tr></table></figure>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+<h2 id="对象和类型"><a href="#对象和类型" class="headerlink" title="对象和类型"></a>对象和类型</h2><h3 id="类的成员"><a href="#类的成员" class="headerlink" title="类的成员"></a>类的成员</h3><table>
+<thead>
+<tr>
+<th>成 员</th>
+<th>说 明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>字段</td>
+<td>字段是类的数据成员，它是类型的一个变量，该类型是类的一个成员</td>
+</tr>
+<tr>
+<td>常量</td>
+<td>常量与类相关(尽管它们没有static修饰符)。编译器使用真实值代替常量</td>
+</tr>
+<tr>
+<td>方法</td>
+<td>方法是与特定类相关联的函数</td>
+</tr>
+<tr>
+<td>属性</td>
+<td>属性是可以从客户端访问的函数组，其访问方式与访问类的公共字段类ftt。C#为读写类中的属性提供了 专用语法，所以不必使用那些名称中嵌有Get或Set的方法。因为属性的这种语法不同于一般函数的语法，  所有在客户端代码中，虚拟的对象被当作实际的东西</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>构造函数是在实例化对象时自动调用的特殊函数。它们必须与所属的类同名，且不能有返回类型。构造 函数用于初始化字段的值</td>
+</tr>
+<tr>
+<td>索引器</td>
+<td>索引器允许对象用访问数组的方式访问。索引器参见第8章</td>
+</tr>
+<tr>
+<td>运算符</td>
+<td>运算符执行的最简单的操作就是加法和减法。在两个整数相加时，严格地说，就是对整数使用“+”运算  符。C#还允许指定把已有的运算符应用于自己的类(运算符重载)。第8章将详细论述运算符</td>
+</tr>
+<tr>
+<td>事件</td>
+<td>事件是类的成员，在发生某些行为(如修改类的字段或属性，或者进行了某种形式的用户交互操作)时，它可  以让对象通知调用方。客户可以包含所谓“事件处理程序”的代码来响应该事件。第9章将详细介绍事件</td>
+</tr>
+<tr>
+<td>析构函数</td>
+<td>析构函数或终结器的语法类似于构造函数的语法，但是在CLR检测到不再需要某个对象时调用它。它们 的名称与类相同，但前面有一个“〜”符号。不可能预测什么时候调用终结器。终结器详见第5章</td>
+</tr>
+<tr>
+<td>类型</td>
+<td>类可以包含内部类。如果内部类型只和外部类型结合使用，就很有趣</td>
+</tr>
+</tbody>
+</table>
+<div class="note info"><p>通过static修饰符声明类的静态成员。静态成员属于类，对每个对象都是相同的。</p></div>
+<div class="note info"><p>object类的对象通过引用传递，而struct结构的对象按值传递。</p></div>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">PhoneCustomer</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">int</span> Age</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">get</span> &#123;<span class="keyword">return</span> age;&#125;</span><br><span class="line">    <span class="keyword">set</span> &#123;age=<span class="keyword">value</span>;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//可以通过编译器自动实现并通过属性初始化器自动初始化</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">int</span> Age &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125; = <span class="number">42</span></span><br><span class="line"><span class="comment">//可以设置访问器的访问权限，但是必须有一个具有属性的访问权限</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">int</span> Age &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">IsSquare</span>(<span class="params">Rectangle rect</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (rect.Height == rect.Width);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//对于只有一个语句的方法，可以使用新的表达式体方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">IsSquare</span>(<span class="params">Rectangle rect</span>) </span>=&gt; rect.Height == rect.Width</span><br></pre></td></tr></table></figure>
+<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Car</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">string</span> _description;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">uint</span> _nWheels;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Car</span>(<span class="params"><span class="keyword">string</span> description, <span class="keyword">uint</span> nWheels</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        _description = description;</span><br><span class="line">        _nWheels = nWheels;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//下面的构造器调用了此类的另一个构造器，如果调用基类的构造器，使用base替换this。</span></span><br><span class="line"><span class="comment">//初始化器中不能有多个调用</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Car</span>(<span class="params"><span class="keyword">string</span> description</span>) : <span class="title">this</span>(<span class="params">description, <span class="number">4</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//下面的代码声明了一个静态构造函数，静态构造函数无参数，只执行一次。</span></span><br><span class="line"><span class="keyword">class</span> <span class="title">Class</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="title">Class</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ......</span><br><span class="line">    &#125;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="只读成员"><a href="#只读成员" class="headerlink" title="只读成员"></a>只读成员</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//下面的代码通过readonly关键字在静态构造器中实现一个只读字段</span></span><br><span class="line"><span class="comment">//在一个文档编辑器中设置可以打开的最大文档数，以限制非注册用户的使用</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">DocumentEditor</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">readonly</span> <span class="keyword">uint</span> s_maxDocuments;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="title">DocumentEditor</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        s_maxDocuments = DoSomethingToFindOutMaxNumber();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="匿名类"><a href="#匿名类" class="headerlink" title="匿名类"></a>匿名类</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以通过var和new关键字构造一个没有名称的匿名类</span></span><br><span class="line"><span class="keyword">var</span> captain = <span class="keyword">new</span> &#123; FirstName = <span class="string">"Jerry"</span>, MiddleName = <span class="string">"T"</span>, LastName = <span class="string">"Kirk"</span> &#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>如果只需要一个小的数据结构，由于性能原因，我们最好使用结构，只需用关键字struct代替class。</p>
+<p>结构与类的区别：</p>
+<ul>
+<li>结构是值引用，遵循其他数据类型所遵循的规则。</li>
+<li>不能从结构中继承。</li>
+<li>结构的构造函数与类的构造函数相同。</li>
+<li>通过添加ref修饰符，可以按引用传递结构。而给类使用ref，则是传递引用的引用。（ref关键字在声明和调用方法时都需要提供）</li>
+</ul>
+<div class="note info"><p>使用out关键字，可以使方法返回多个类型不同的关键字。同样需要在声明和调用时都提供。</p></div>
+<h3 id="可空类型"><a href="#可空类型" class="headerlink" title="可空类型"></a>可空类型</h3><p>可以在任意结构类型后面添加“<strong>?</strong>”声明可空类型。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>? x1 = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用合并操作符，下式含义：如果x3为null，则用x6赋值给它1，否则提取x3的值。</span></span><br><span class="line"><span class="keyword">int</span> x6 = x3 ?? <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Color</span><br><span class="line">&#123;</span><br><span class="line">	Red,</span><br><span class="line">	Green,</span><br><span class="line">	Yellow</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以声明枚举类型的变量</span></span><br><span class="line">Color c1 = Color.Red;</span><br><span class="line">WriteLine(c1);</span><br><span class="line"><span class="comment">//enum类型默认为int，从0递增。也可以更改：</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Color:<span class="keyword">short</span></span><br><span class="line">&#123;</span><br><span class="line">	Red = <span class="number">1</span>,</span><br><span class="line">	Green = <span class="number">2</span>,</span><br><span class="line">	Blue = <span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//强制类型转换</span></span><br><span class="line">Color c2 = (Color) <span class="number">2</span>;</span><br><span class="line"><span class="keyword">short</span> number = (<span class="keyword">short</span>) c2;</span><br></pre></td></tr></table></figure>
+<h3 id="Object类的方法"><a href="#Object类的方法" class="headerlink" title="Object类的方法"></a>Object类的方法</h3><p>所有.NET类都派生自SystemObject，所以我们可以访问由Object类定义的成员方法：</p>
+<ul>
+<li>ToString()：获取对象的字符串表示，没有提供格式化选项。</li>
+<li>GetHashCode()：用于位于散列表或字典中的对象。</li>
+<li>Equals(),ReferenceEquals()：有三个比较对象相等性的方法。</li>
+<li>Finalize()：用于垃圾回收。</li>
+<li>GetType()：提供对象成员所属类的更多信息。</li>
+<li>MemberwiseClone()：复制对象，并返回对副本的一个引用。</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>继承的类型以及在C#中的支持情况：</p>
+<ul>
+<li>单重继承：一个类派生自一个基类。C#采用此种继承。</li>
+<li>多重继承：一个类派生自多个类。C#不支持。</li>
+<li>多层继承：B派生自A，C派生自B。C#支持。</li>
+<li>接口继承：C#允许接口多重继承。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果同时派生自类和接口，类必须在接口的前面。</span></span><br><span class="line">public class MyDerivedClass: MyBaseClass, IInterface1, IInterface2</span><br><span class="line">&#123;</span><br><span class="line">	......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="虚方法"><a href="#虚方法" class="headerlink" title="虚方法"></a>虚方法</h3><p>使用virtual关键字定义的虚方法可以在派生类中被重写，重写方法时需要使用override关键字。</p>
+<h3 id="多态性"><a href="#多态性" class="headerlink" title="多态性"></a>多态性</h3><p>如果一个方法的参数是一个类，那么它的派生类也可以传递给该方法。</p>
+<h3 id="抽象类和抽象方法"><a href="#抽象类和抽象方法" class="headerlink" title="抽象类和抽象方法"></a>抽象类和抽象方法</h3><p>使用abstract声明抽象类和抽象方法。抽象类不能实例化，抽象方法不能直接实现，必须在非抽象派生类中重写。</p>
+<p>如果类包含抽象方法，则该类也必须声明为抽象的。</p>
+<h3 id="密封类和密封方法"><a href="#密封类和密封方法" class="headerlink" title="密封类和密封方法"></a>密封类和密封方法</h3><p>使用sealed修饰符声明的类不能创建子类，声明的方法不能被重写。</p>
+<h3 id="派生类的构造函数"><a href="#派生类的构造函数" class="headerlink" title="派生类的构造函数"></a>派生类的构造函数</h3><p>构造函数总是按照层次结构的顺序，从System.Object开始，从上向下调用，直到要实例化的类为止。</p>
+<h3 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h3><table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>应用于</th>
+<th>说 明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public</td>
+<td>所有类型或成员</td>
+<td>任何代码均可以访问该项</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>类型和内嵌类型的所有成员</td>
+<td>只有派生的类型能访问该项</td>
+</tr>
+<tr>
+<td>internal</td>
+<td>所有类型或成员</td>
+<td>只能在包含它的程序集中访问该项</td>
+</tr>
+<tr>
+<td>private</td>
+<td>类型和内嵌类型的所有成员</td>
+<td>只能在它所属的类型中访问该项</td>
+</tr>
+<tr>
+<td>protected internal</td>
+<td>类型和内嵌类型的所有成员</td>
+<td>只能在包含它的程序集和派生类型的任何代码中访问该项</td>
+</tr>
+</tbody>
+</table>
+<p>对于嵌套类型，内部类总是可以访问外部类的所有成员，包括私有成员。</p>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><ul>
+<li>接口包含方法、属性、索引器和事件的声明，但是不能提供其中任何成员的实现方式。</li>
+<li>不能实例化接口，但是可以声明接口类型的变量。</li>
+<li>不能声明成员的修饰符。</li>
+</ul>
+<h3 id="as和is运算符"><a href="#as和is运算符" class="headerlink" title="as和is运算符"></a>as和is运算符</h3><p>用于对象类型判断和转换的两个操作符：</p>
+<ul>
+<li>as返回对象的引用，但是从不抛出异常，如果对象不是所要求的类型，就返回null。</li>
+<li>is判断对象是否是指定的类型，返回true或者false。</li>
+</ul>
+<h2 id="托管和非托管资源"><a href="#托管和非托管资源" class="headerlink" title="托管和非托管资源"></a>托管和非托管资源</h2><p>关于内存管理和垃圾回收的高级内容，此处略。</p>
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><h3 id="泛型的实现"><a href="#泛型的实现" class="headerlink" title="泛型的实现"></a>泛型的实现</h3><p>链表的非泛型实现：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//LinkedListNode.cs</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">LinkedListNode</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LinkedListNode</span>(<span class="params"><span class="keyword">object</span> <span class="keyword">value</span></span>) </span>=&gt; <span class="keyword">this</span>.Value = <span class="keyword">value</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">object</span> Value &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> LinkedListNode Next &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> LinkedListNode Prev &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//LinkedList.cs</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">LinkedList</span>:<span class="title">IEnumerable</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> LinkedListNode First &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> LinkedListNode Last &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> LinkedListNode <span class="title">AddLast</span>(<span class="params"><span class="keyword">object</span> node</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> newnode = <span class="keyword">new</span> LinkedListNode(node);</span><br><span class="line">            <span class="keyword">if</span> (First == <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                First = newnode;</span><br><span class="line">                Last = First;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                LinkedListNode Previous = Last;</span><br><span class="line">                Last.Next = newnode;</span><br><span class="line">                Last = newnode;</span><br><span class="line">                Last.Prev = Previous;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> newnode;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> IEnumerator <span class="title">GetEnumerator</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            LinkedListNode current = First;</span><br><span class="line">            <span class="keyword">while</span> (current != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> current.Value;</span><br><span class="line">                current = current.Next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//Program.cs</span></span><br><span class="line"><span class="keyword">var</span> list1 = <span class="keyword">new</span> LinkedList();</span><br><span class="line">list1.AddLast(<span class="number">2</span>);</span><br><span class="line">list1.AddLast(<span class="number">4</span>);</span><br><span class="line">list1.AddLast(<span class="number">6</span>);</span><br><span class="line">list1.AddLast(<span class="string">"3"</span>);<span class="comment">//运行异常</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">int</span> i <span class="keyword">in</span> list1)</span><br><span class="line">&#123;</span><br><span class="line">    System.Console.WriteLine(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>链表的泛型实现</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//LinkedListNode.cs</span></span><br><span class="line">public class LinkedListNode&lt;T&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">LinkedListNode</span>(<span class="params">T <span class="keyword">value</span></span>) </span>=&gt; <span class="keyword">this</span>.Value = <span class="keyword">value</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> T Value &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> LinkedListNode&lt;T&gt; Next &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> LinkedListNode&lt;T&gt; Prev &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//LinkedList.cs</span></span><br><span class="line">    public class LinkedList&lt;T&gt;:IEnumerable&lt;T&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> LinkedListNode&lt;T&gt; First &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> LinkedListNode&lt;T&gt; Last &#123; <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> LinkedListNode&lt;T&gt; <span class="title">AddLast</span>(<span class="params">T node</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> newnode = <span class="keyword">new</span> LinkedListNode&lt;T&gt;(node);</span><br><span class="line">            <span class="keyword">if</span> (First == <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                First = newnode;</span><br><span class="line">                Last = First;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                LinkedListNode&lt;T&gt; Previous = Last;</span><br><span class="line">                Last.Next = newnode;</span><br><span class="line">                Last = newnode;</span><br><span class="line">                Last.Prev = Previous;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> newnode;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> IEnumerator&lt;T&gt; <span class="title">GetEnumerator</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            LinkedListNode&lt;T&gt; current = First;</span><br><span class="line">            <span class="keyword">while</span> (current != <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">return</span> current.Value;</span><br><span class="line">                current = current.Next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        IEnumerator IEnumerable.GetEnumerator() =&gt; GetEnumerator();</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//Program.cs</span></span><br><span class="line"><span class="keyword">var</span> list1 = <span class="keyword">new</span> LinkedList&lt;<span class="keyword">int</span>&gt;();</span><br><span class="line">list1.AddLast(<span class="number">2</span>);</span><br><span class="line">list1.AddLast(<span class="number">4</span>);</span><br><span class="line">list1.AddLast(<span class="number">6</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">int</span> i <span class="keyword">in</span> list1)</span><br><span class="line">&#123;</span><br><span class="line">    System.Console.WriteLine(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不能讲null赋予泛型，所以需要使用default。</span></span><br><span class="line">T doc = <span class="keyword">default</span>(T);</span><br><span class="line"><span class="comment">//default将泛型初始化为null（引用类型）或者0（值类型）。</span></span><br></pre></td></tr></table></figure>
+<h3 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//指定TDocument类型必须实现IDocument接口，以避免类型转换时的错误</span></span><br><span class="line">public class DocumentManager&lt;TDocument&gt;</span><br><span class="line">	<span class="keyword">where</span> TDocument:IDocument</span><br><span class="line">&#123;......&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>约 束</th>
+<th>说 明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>where T: struct</td>
+<td>对于结构约束，类型T必须是值类型</td>
+</tr>
+<tr>
+<td>where T: class</td>
+<td>类约束指定类型T必须是引用类型</td>
+</tr>
+<tr>
+<td>where T: IFoo</td>
+<td>指定类型T必须实现接口 IFoo</td>
+</tr>
+<tr>
+<td>where T: Foo</td>
+<td>指定类型T必须派生自基类Foo</td>
+</tr>
+<tr>
+<td>where T: new()</td>
+<td>这是一个构造函数约束，指定类型T必须有一个默认构造函数</td>
+</tr>
+<tr>
+<td>where T1 : T2</td>
+<td>这个约束也可以指定，类型T1派生自泛型类型T2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="静态成员"><a href="#静态成员" class="headerlink" title="静态成员"></a>静态成员</h3><p>泛型类的静态成员只能在一个实例中共享。</p>
+<h3 id="协变和抗变"><a href="#协变和抗变" class="headerlink" title="协变和抗变"></a>协变和抗变</h3><p>如果泛型类型使用out关键字标注，对应的泛型接口就是协变的。返回类型只能是T。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public interface IIndex&lt;out T&gt;</span><br><span class="line">&#123;</span><br><span class="line">    T <span class="keyword">this</span>[<span class="keyword">int</span> index] &#123;<span class="keyword">get</span>;&#125;<span class="comment">//返回只能是T</span></span><br><span class="line">    <span class="keyword">int</span> Count &#123;<span class="keyword">get</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果泛型类型用in关键字标注，对应的泛型接口就是抗变的。接口只能把泛型类型T用作方法的输入。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public interface IDisplay&lt;in T&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Show</span>(<span class="params">T item</span>)</span>;<span class="comment">//参数只能是T</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="泛型结构"><a href="#泛型结构" class="headerlink" title="泛型结构"></a>泛型结构</h3><p><code>Nullable&lt;T&gt;</code>用于解决数据库中数字可以为空的问题。</p>
+<h3 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h3><p>比较复杂，暂时跳过</p>
+<h2 id="数组和元组"><a href="#数组和元组" class="headerlink" title="数组和元组"></a>数组和元组</h2><p>声明：<code>int[] myArray = new int[4] {4,7,11,2};</code></p>
+<p>二维数组：<code>int[,] twodim = new int[3,3];</code></p>
+<p>锯齿数组：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] jagged = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>][];	<span class="comment">//先声明行数</span></span><br><span class="line">jagged[<span class="number">0</span>] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>] &#123;<span class="number">1</span>,<span class="number">2</span>&#125;;</span><br><span class="line">jagged[<span class="number">1</span>] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">6</span>] &#123;<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">3</span>&#125;;</span><br><span class="line">jagged[<span class="number">2</span>] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>] &#123;<span class="number">6</span>,<span class="number">30</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="第二部分-NET-Core和Windows-Runtime"><a href="#第二部分-NET-Core和Windows-Runtime" class="headerlink" title="第二部分 .NET Core和Windows Runtime"></a>第二部分 .NET Core和Windows Runtime</h1><h1 id="第三部分-Windows应用程序"><a href="#第三部分-Windows应用程序" class="headerlink" title="第三部分 Windows应用程序"></a>第三部分 Windows应用程序</h1><h1 id="第四部分-Web应用程序和服务"><a href="#第四部分-Web应用程序和服务" class="headerlink" title="第四部分 Web应用程序和服务"></a>第四部分 Web应用程序和服务</h1></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
         };
@@ -422,11 +626,27 @@
     </entry>
     
     <entry>
-      <title><![CDATA[被忽视的心理动因]]></title>
+      <title><![CDATA[走出中国式家长困局]]></title>
       <url>/2018/02/05/%E5%BF%83%E7%90%86/</url>
-      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p="">心理学在中国社会没有受到应有的重视，人们不仅不关注他人的心理状态，甚至也不关注自己的心理状态。这种<strong>同理心</strong>的缺乏带来了广泛的问题，只是很少有人意识到这些问题还有一个心理上的深层根源。对心理学的漠视一定程度上并不是因为人们对心理学理论缺乏接触，而恰恰相反，市场上充斥着各种成功学畅销书鸡汤，每一本都会扯上一点心理学，造成一种心理学不过如此的错觉。本文旨在从更加严肃的视角探讨心理学的一些理论及其在日常生活中的表现。<p></p>
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p=""> 如果说中国的家长是世界上最辛苦、最焦虑的家长恐怕不为过，只是这种心理上和物质上的付出未必总能走向好的结局。这种耕耘与收获间的错位究竟因何而起，又如何化解？本文试着从近期的一系列热点事件出发，借鉴心理学的理论，来寻找答案。<p></p>
 <a id="more"></a>
-<h2 id="心理学的科学性"><a href="#心理学的科学性" class="headerlink" title="心理学的科学性"></a>心理学的科学性</h2><p>在讨论具体问题之前，一个重要的问题必须被首先回答，那就是“<strong>心理学是一门科学吗？</strong>”<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p>
+<h2 id="中国式的家长困局"><a href="#中国式的家长困局" class="headerlink" title="中国式的家长困局"></a>中国式的家长困局</h2><p>过去的一年里发生了很多热点事件，很多在层出不穷的大新闻中逐渐被人淡忘，但是有一些却具有非常重要的标志意义。比如最近的<a href="#wziw"><strong>“北大留美学生写万字长文数落父母‘过度关爱’，12年春节不归”</strong></a>事件。新闻的当事人是每个家长心目中“别人家的孩子”，高考状元，北大学生，留学美国，每一个都是让人艳羡的标签，而其与父母的决裂却也是每一个家长心中最隐秘的恐惧。</p>
+<p>这篇万字长文抛出了一个广泛存在却又被有意无意忽视的问题，即中国式的“父母-子女”关系。与之相关的新闻、事件还有很多，比如更少人知、更耸人听闻的<a href="#uma"><strong>“北大吴谢宇弑母案”</strong></a>。其他的引起广泛讨论的还有<strong>杨永信电击治疗网瘾少年</strong>和<strong>豫章书院</strong>事件。</p>
+<p>这类事件的共同点都是家长对子女的控制欲和子女的自由意志之间的矛盾，这种矛盾既存在于顶尖学府里的“完美学生”中，也存在于垃圾学校里的“问题少年”里。这些事件之所以引起了广泛的关注，在于它们的最终的结果，两代人之间的严重对立，这种对立或体现在绝交、或体现在肉体的消失。对于每一个准家长或现家长，我们必须反思、吸取教训、避免重蹈覆辙；而对于每一个子女或对立关系里弱势的一方，我们同样需要反思、寻找问题的有效出路、避免走向极端。</p>
+<p>如何破解这种“中国式家长困局”，最近在知乎上对一起类似事件的讨论可以给我们提供一些思路。</p>
+<p>这起讨论围绕的是这样一起新闻<a href="#dvy">“父亲将十四岁早恋女儿打住院”</a>。对于这起事件，我觉得<a href="#dvytl">这个观点</a>算是说到点子上了。</p>
+<p>我认为这些问题的根源可以追溯到两个方面：</p>
+<ul>
+<li>对客观世界的认知偏差。</li>
+<li>失去了与自我内心的联系。</li>
+</ul>
+<h3 id="如何认识和反馈客观世界"><a href="#如何认识和反馈客观世界" class="headerlink" title="如何认识和反馈客观世界"></a>如何认识和反馈客观世界</h3><p>人们接触的信息越来越多，获取知识越来越容易，沟通交流越来越便捷，可是思考、审视却越来越少。我们对于大部分信息总是停留在肤浅的、情绪化的理解之中，而忽略了科学理性思维的重要性。</p>
+<p>家长们可以思考这样一个问题“什么决定了孩子的考试分数？”。做了多少作业？上了多少补习班？家长管的严不严？上课认不认真听讲？出现在家长们脑海里的答案很多，而由这些答案引申出的问题更多：孩子玩游戏/谈恋爱/开小差导致成绩下降了，于是严加看管、粗暴禁止、课外补习等等，而极端的，送去戒网瘾学习。其实，我觉得这个问题的答案很简单：最直接决定考试分数的是试卷上的答案，是答案所回答的内容。这也许听起来是个废话，可是，有多少家长关心过孩子每条学了什么呢？关心考试、学习和学校生活的实质而不是结果呢？如果我们并没有真正在乎结果产生的过程，又如何获得满意的结果。这就是形式与内容的区别，也是中国式家长最容易走入的误区。</p>
+<p>另外一个影响家庭关系的问题是游戏。如何避免孩子沉迷游戏？如何让已经沉迷游戏的孩子走出来？是很多家长心中最忧虑的事情。然而，一个简单的事实是，家长们作为成年人，有多少可以避免游戏或者与游戏类似的娱乐活动的诱惑。一个火爆全国的王者荣耀或许可以反映这一点。这里并不是为游戏开脱，而是为了弄清楚：为什么游戏成了问题？尤其是家长与学生之间的问题。我想最根本的原因在于大部分家长所采取的将游戏与学习完全对立的态度。一旦以这样的态度为前提，那么就没有好的结果。 </p>
+<p>红黄蓝事件，Elsagate</p>
+<h3 id="如何与自我内心沟通"><a href="#如何与自我内心沟通" class="headerlink" title="如何与自我内心沟通"></a>如何与自我内心沟通</h3><p>当今社会，缺乏<strong>同理心</strong>的人越来越多。最近的一些事件集中体现了这一点，比如：<a href="http://news.ynet.com/2018/01/31/913068t70.html" target="_blank" rel="noopener">成都女子捡狗索筹不成摔狗</a>，<a href="https://baike.baidu.com/item/%E5%88%98%E9%91%AB/22205029" target="_blank" rel="noopener">刘鑫案</a> ，<a href="http://news.ycwb.com/2018-01/10/content_25874224.htm" target="_blank" rel="noopener">高铁拦车等人</a>等等。日常生活中纵容小孩大声喧哗吵闹、公共场合大声公放视频等行为也屡见不鲜。这些不顾他人感受的行为往往被理解为社会公德的范畴，然而，我觉得这反映了一个更为深刻的问题，那就是大部分人逐渐失去了与自我的联系，失去了与自我内心痛苦的联系、也失去了与自己过去的联系。</p>
+<p>忘记了苦痛，便忘记了真情实感，而只剩下利益得失。忘记了过去，便忘记了弱势、谨慎、自由为何物。中国式家长的口头禅之一便是“我们是过来人”、“我们吃过的盐比你吃过的饭都多”之类的话。他们既忧心于如何让子女避免重蹈自己的覆辙，又热衷于让子女完成自己未尽的夙愿。然而，对于自己过去为什么会犯错、为什么没能实现理想的解释总是停留在浅显的结果上，或者是归因于当初的规划，比如高考志愿没填好、没有读研究生、没有出国留学，又或者是归因于人性的弱点，比如怕吃苦、太贪玩、早恋等等。这样的经验总结甚至称不上是个反思。大部分大人们都忘记了考试前的紧张、遇见初恋时的心跳、获得奖励时的自豪和被批评时的失落。所以当他们和早恋的子女沟通时，在孩子们看来，就是一个嘴上说着什么都懂，实际上却什么都不懂的老顽固形象。于是，中国式的家庭困局就此显现，家长们觉得自己是一番苦心，完全为了子女着想，恨不得把心掏出来，而孩子们同样对家长们将自己在游戏中感受到的成就感、在朦胧的爱情中感受到的悸动熟视无睹，却总是谈些遥远未来的生存问题感觉无法理解。这种沟通的鸿沟一旦产生，就很难消弭。然而我们要问，究竟谁应该去承担起消弭这一鸿沟的责任？自然是更有经验更有动机的家长，然而，他们为什么跨不出这一步呢？那是因为他们再也走不进眼前自己的孩子，同样也是过去的自己的内心。</p>
+<h2 id="教育和成长中被忽视的心理动因"><a href="#教育和成长中被忽视的心理动因" class="headerlink" title="教育和成长中被忽视的心理动因"></a>教育和成长中被忽视的心理动因</h2><h3 id="心理学的科学性"><a href="#心理学的科学性" class="headerlink" title="心理学的科学性"></a>心理学的科学性</h3><p>心理学在中国社会没有受到应有的重视，人们不仅不关注他人的心理状态，甚至也不关注自己的心理状态。这种<strong>同理心</strong>的缺乏带来了广泛的问题，只是很少有人意识到这些问题还有一个心理上的深层根源。对心理学的漠视一定程度上并不是因为人们对心理学理论缺乏接触，而恰恰相反，市场上充斥着各种成功学畅销书鸡汤，每一本都会扯上一点心理学，造成一种心理学不过如此的错觉。让我们从更加严肃的视角探讨心理学的一些理论及其在日常生活中的表现。在讨论具体问题之前，一个重要的问题必须被首先回答，那就是“<strong>心理学是一门科学吗？</strong>”<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p>
 <p>答案：<strong>心理学是一门科学</strong>，只要它满足科学的评判标准：</p>
 <ul>
 <li>研究范围上：研究的问题要能够用实验解决（empirically solvable），提出的理论可以被测试，进而被证伪（falsifiable）。</li>
@@ -434,7 +654,49 @@
 <li>成果发布上：产生的知识会交由公众验证（publicly verifiable）。</li>
 </ul>
 <p>这些评判标准表明，并不是所有对心理问题的讨论都可以被归为科学。心理学和社会学等学科类似，属于“软科学”，与之相应的是物理、化学等“硬科学”。针对心理学的科学性的问题可以参见基思·斯坦诺维奇所著《这才是心理学》一书。</p>
-<h2 id="马斯洛的需求层次理论1"><a href="#马斯洛的需求层次理论1" class="headerlink" title="马斯洛的需求层次理论1"></a>马斯洛的需求层次理论<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></h2><p>马斯洛的需求层次理论是最广为人知的心理学理论之一，但是除了那张金字塔形的需求图之外，它到底说了些什么呢？</p>
+<h3 id="鸡汤心理学——社会价值排序"><a href="#鸡汤心理学——社会价值排序" class="headerlink" title="鸡汤心理学——社会价值排序"></a>鸡汤心理学——社会价值排序</h3><p>石勇是《南风窗》杂志主笔，畅销书作家。现在这个社会，畅销书作家这个称号多少是带有一点贬意的。石勇的文体大体属于公众号爆款鸡汤文的范畴。这里引用他几年前的一篇博文，读者可以略窥一二：</p>
+<blockquote>
+<p>长叹一声：穷人其实从一开始就输了，而原因你并没有想到<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup></p>
+<p><em>摘自石勇新浪微博客</em></p>
+<p>某人坐动车去了一个城市，对我说：“现在动车基本上已经变成民工专列了”。</p>
+<p>没有鄙视的意思，而是发现了这样的现象：在动车上，一些从衣着、皮肤颜色、气质、说话内容、姿态上很容易就能够识别为社会下层的人们，随意大声喧哗、脱鞋乱七八糟地躺在座位上、随手乱扔垃圾、纵容小孩逗笑打闹……这使得动车从当初看上去很中产，迅速“下层化”，其跟绿皮车的区别，也就速度快一些而已。</p>
+<p>其间，发生了这样一个故事。</p>
+<p>有一位社会下层的妇女，带着三四岁的小孩一起坐车，买了一些劣质的零食在车上吃。小孩吵个不停，一副天不怕地不怕的样子，间或嚷嚷着要吃零食。这位妇女作势要管，但并不真的管，而是放纵小孩吵闹。她安抚或爱小孩的主要方式，就是给他吃零食，而零食的包装袋则随意丢在座位下。</p>
+<p>看她的表情很享受。</p>
+<p>一般而言，一个人是农民工，是公司白领，是公务员，还是所谓知识分子，都会保持他在生活中的“自我同一性”。他表情如何，他怎么说话，他跟世界在心理上是什么关系——一句话，他平时是如何显示自己的存在的，基本上都会复制在不是特别要求装13的公共场合里。按照社会学的装13理论，这些都属于“表演”的“前台”，语言模式、POSE，以及行为模式差不多是一致的。</p>
+<p>真巧，坐在这位下层妇女过道隔壁座位的，恰好是一位从衣着、气质，以及一张戴眼镜的白皙的脸上看属于中产阶层的妇女，她也有一个大概是两三岁的小孩。</p>
+<p>这个中产小孩本来看上去很乖，安静地看着她妈妈拿给他的漫画书，间或稚气地问一些问题，而她妈妈总是很温柔耐心地回答。看得出她尽力保持着不打扰他人的意识，或许还有保持自身形象的克制。</p>
+<p>但她的小孩看到社会下层小孩放肆地吵闹，非常开心的样子，也受到了感染，便挣脱她的妈妈，跟着一起玩。</p>
+<p>这么一来，中产女性脸上的表情有了变化。</p>
+<p>在一开始，她并没有正视下层妇女和下层孩子的存在。他们在那儿吵闹、说话，似乎和她，以及她的小孩无关。这是两个相对隔离的世界，虽然大家在动车上相遇了，只有一个过道之隔。但当然，在下层妇女及其孩子的存在影响到她的时候，她的表情，还有目光，分明有着一种隐隐的鄙视。也许，从一开始，鄙视其实就已经存在于内心，只是没有在表情上显示出来。</p>
+<p>但随着她的孩子去和下层孩子玩，这两个相互隔离的世界被打破了。她换上了一副表情，目光主要看住自己的孩子，间或也礼貌性看一下下层妇女和她的小孩，露出了谨慎的友好的微笑。</p>
+<p>她当然并不愿意这个世界被打破。然而，她并没有呵斥小孩，不准去和下层小孩玩。这一POSE，大概说明了她和市侩，以及小土豪的分野。</p>
+<p>但下层妇女看见中产小孩和自己的小孩玩，中产女性也向自己这边投来友好的目光，似乎受到了某种激励——这一激励可以解释为终于被比自己阶层地位高的人看得起了，充分地释放出了她的友好，采用她所在的阶层所特有的表达方式，大大咧咧地撕开几个零食袋，一边拿给自己的小孩，一边拿给中产小孩，同时嘴巴里还对中产小孩说“吃”。</p>
+<p>中产女性明显并不愿意自己的小孩拿并吃这些零食。但“不愿意”表情在脸上的显示只有一秒，她应该很清楚直接拒绝并不礼貌，容易在下层妇女那儿引起“你看不起我”的心理后果。于是，她把自己小孩手上拿的零食收了起来，然后对下层妇女说“不用了，太感谢了”，再也不让小孩拿了。</p>
+<p>这是看不起人吗？是害怕劣质零食有问题吗？我估计在这方面，中产女性和下层妇女是无法相互理解的，很难对话。她们的生活方式没有重叠，也无法进入对方的内心世界。</p>
+<p>而从这个区别中，我痛苦地看，出身于社会下层的人们，除非有天赋，或者有强大的自我管理能力，在后天可以自我教育，自我成长，否则，在从小开始，家庭对他的言传身教中，他在头脑上、心理上，甚至人格上，已经形成了一种糟糕的应对这个世界的模式，层次和素质堪忧，有的一开始其实就已经输了。</p>
+<p>在这个世界上，有很多人瞧不起社会下层，瞧不起穷人，尤其是这两种人：刚脱贫不久的暴发户，他们在阶层地位上大概攀爬到了中产上层；在社会利益食物链上位于上端，靠压榨穷人维持自己奢侈生活的人，包括权力和资本阶层。</p>
+<p>前一种人瞧不起穷人很简单，是因为他们必须鄙视过去卑贱的自我，才能让自己意识到不再是过去那个穷人了，而有了一个“新自我”。后一种人鄙视穷人同样也不复杂，他们压榨穷人，其实是有负罪感和恐惧感的，掩饰这两种感觉的办法，就是鄙视。</p>
+<p>当然还有其它人瞧不起穷人，但都出奇一致：补偿。在心理食物链中，他们也被比他们阶层地位高、混得好的人瞧不起。这种感觉很难受，而补偿的办法就是去瞧不起在心理食物链条上位于他们下端的人，很不幸，穷人正位于下端。</p>
+<p>但不是所有的人，在所有时候，瞧不起社会下层，瞧不起穷人，都是想要在心理上吃掉他们来刷存在感、价值感。</p>
+<p>有一种瞧不起，是对素质的瞧不起，对社会下层的头脑、心理、人格层次的瞧不起。这种瞧不起虽然可以有衬托其身份优越感的心理效果，但主要的功能还是一种自保策略：避免沾上穷人的那种低档的存在方式，离得越远越好。</p>
+<p>故事中的中产女性，我想就是这样。</p>
+<p>她不想让小孩拿劣质零食，并把零食收起来，不让小孩吃，并不仅仅是担心不卫生，更重要的是不符合她对小孩的培养，触及到了她的价值观和生活方式。</p>
+<p>中产女性在培养小孩上，其精致细腻完全在下层妇女的想象之外，小孩能吃什么，不能吃什么，哪时候吃，都有一些讲究，根本不像下层妇女那样，只要喂饱就完事。</p>
+<p>根据从小的经验，以及现在的一些考察，我发现社会下层在“培养”小孩上，和喂养一群家畜家禽有某些相似，都是放任不管，喂饱了事，出问题了，再来管束一下，然后一切照旧。而如果他们真的很“爱”孩子的话，甚至还会放纵。</p>
+<p>另外，他们跟世界打交道的方式也直接传递到孩子身上。社会下层生活粗糙，采用的是直接、原始的语言、肢体动作去回应这个世界，显示自己在世界中的存在。不采用一套社会文化礼仪来包装的这种存在方式，都有一个特点：缺乏对自我和世界关系的反思。</p>
+<p>所以他们基本上不会去意识，自己的行为可能对他人意味着什么。</p>
+<p>一个小孩在这种家庭氛围中成长，会怎么样呢？</p>
+<p>（1）、在捕捉和领悟新事物上，会被别人甩出一条大街；（2）、缺乏自我反思能力；（3）、视野狭窄；（4）、对自己的行为在别人那儿意味着什么缺乏意识；（5）、不太具备一些被认为是“教养”的东西……它们都是一个人在这个社会中打拼的大忌。所以，除非是天才，除非拥有自我管理和自我教育能力，否则，一个人如果是出身社会下层，要突破阶层封锁，基本上要通过自我和人性去换。</p>
+</blockquote>
+<p>这样的文章如今非常流行，它的写作套路大体是从日常生活中的某件小事出发，延伸到某一类社会群体，得到一些看上去很有道理的结论，再贴上一个标签化吸引眼球的标题。</p>
+<p>这里我并不想批判这类文体，相反，我觉得这类文体是有其存在的积极意义和商业价值的。它的积极意义在于，部分弥补了枯燥的学术研究和浅薄的个人经验之间的鸿沟。大部分人没有精力和耐心去看专业的心理学教材和研究论文，也没有金钱和资源获得专业的心理咨询，这种文章兼具文学作品的通俗易懂又有一定的思想深度，是一种有益的补充。它能够提醒人们注意日常生活的心理层面。</p>
+<p>比如，石勇在畅销书《世界如此险恶你要内心强大》提出了<strong>社会价值排序理论</strong>。</p>
+<blockquote class="blockquote-center"><p><strong>社会价值排序理论</strong>认为：如果我们心中根据社会的观念，形成了某种价值排序，比如认为白领比民工高档、大学生比小学生厉害。那么我们就会受到这种社会价值排序的操纵，就无法避免产生诸如焦虑、紧张、自卑之类的负面情绪。</p>
+</blockquote>
+<p>社会价值排序的观点认为，一旦一个人产生“战胜自己”才能获得成功的观点，那么他就已经输了。与自我为敌必然会导致自我的冲突和分裂。我们真正需要追求的是<strong>“洞悉外部世界用来控制、奴役我们的自我的东西，并且把它们从自我的结构里清除出去”</strong>。</p>
+<p>这样的观点是有一定道理的，但是无论是其产生还是论述都是基于个人经验主义，它只是指出了“是什么”和“为什么”，却难以促使读者形成具有实践指导意义的行动意志。这是这类心理学论述的局限性。</p>
+<h3 id="人本心理学——需求层次理论1"><a href="#人本心理学——需求层次理论1" class="headerlink" title="人本心理学——需求层次理论1"></a>人本心理学——需求层次理论<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></h3><p>马斯洛的需求层次理论是最广为人知的心理学理论之一，但是除了那张金字塔形的需求图之外，它到底说了些什么呢？</p>
 <p>马斯洛，全名<strong>亚伯拉罕·哈罗德·马斯洛</strong> （<strong>Abraham Harold Maslow</strong> 1908.04.01－1970.06.08）是人本心理学理论的建立者，1967年当选为美国心理学会主席。</p>
 <p>人本主义心理学认为<a href="http://wiki.mbalib.com/wiki/%E7%B2%BE%E7%A5%9E%E5%88%86%E6%9E%90%E5%AD%A6%E6%B4%BE" target="_blank" rel="noopener">精神分析学派</a>过于强调病态的行为和过于以决定论作为人的价值基础，缺乏了对行为的意义、正面的成长和发展的探索，因此决意创立一个全新的心理学取向，藉以强调正向的心理发展和个人成长的价值。同时又加入了<a href="http://wiki.mbalib.com/wiki/%E5%AD%98%E5%9C%A8%E4%B8%BB%E4%B9%89" target="_blank" rel="noopener">存在主义</a>的哲学思想，强调自由、个人决定的价值和人生的意义。</p>
 <p>作为一个流派，其内容繁多，而对一般人最具指导意义的莫过于马斯洛提出的<strong>需求层次论 (Need-Hierarchy Theory)</strong>。</p>
@@ -480,50 +742,17 @@
 </ol>
 <p>在这些特征中，马斯洛特别强调顶峰体验的概念。<strong>顶峰体验（peak experience）</strong>指自我实现者在人生历程中曾有过体验到欣喜感、完美感及幸福感的经验。顶峰体验多在人生领悟、至爱授受、苦尽甘来或宗教悟道等情境下产生，是人生难得的经验，只有实际经历过的人才会有此体验。高峰体验是人类的共同感受，每个正常人都可能在生活中得到这种体验。自我实现者的高峰体验频率较高且程度较深。</p>
 <div class="note primary"><p><strong>顶峰体验（peak experience）</strong>的差异是自我实现者与普通人最重要的区别之一。</p></div>
-<h2 id="石勇的社会价值排序理论"><a href="#石勇的社会价值排序理论" class="headerlink" title="石勇的社会价值排序理论"></a>石勇的社会价值排序理论</h2><p>石勇是《南风窗》杂志主笔，畅销书作家。现在这个社会，畅销书作家这个称号多少是带有一点贬意的。石勇的文体大体属于公众号爆款鸡汤文的范畴。这里引用他几年前的一篇博文，读者可以略窥一二：</p>
-<blockquote>
-<h2 id="长叹一声：穷人其实从一开始就输了，而原因你并没有想到3"><a href="#长叹一声：穷人其实从一开始就输了，而原因你并没有想到3" class="headerlink" title="长叹一声：穷人其实从一开始就输了，而原因你并没有想到3"></a>长叹一声：穷人其实从一开始就输了，而原因你并没有想到<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup></h2><p><em>摘自石勇新浪微博客</em></p>
-<p>某人坐动车去了一个城市，对我说：“现在动车基本上已经变成民工专列了”。</p>
-<p>没有鄙视的意思，而是发现了这样的现象：在动车上，一些从衣着、皮肤颜色、气质、说话内容、姿态上很容易就能够识别为社会下层的人们，随意大声喧哗、脱鞋乱七八糟地躺在座位上、随手乱扔垃圾、纵容小孩逗笑打闹……这使得动车从当初看上去很中产，迅速“下层化”，其跟绿皮车的区别，也就速度快一些而已。</p>
-<p>其间，发生了这样一个故事。</p>
-<p>有一位社会下层的妇女，带着三四岁的小孩一起坐车，买了一些劣质的零食在车上吃。小孩吵个不停，一副天不怕地不怕的样子，间或嚷嚷着要吃零食。这位妇女作势要管，但并不真的管，而是放纵小孩吵闹。她安抚或爱小孩的主要方式，就是给他吃零食，而零食的包装袋则随意丢在座位下。</p>
-<p>看她的表情很享受。</p>
-<p>一般而言，一个人是农民工，是公司白领，是公务员，还是所谓知识分子，都会保持他在生活中的“自我同一性”。他表情如何，他怎么说话，他跟世界在心理上是什么关系——一句话，他平时是如何显示自己的存在的，基本上都会复制在不是特别要求装13的公共场合里。按照社会学的装13理论，这些都属于“表演”的“前台”，语言模式、POSE，以及行为模式差不多是一致的。</p>
-<p>真巧，坐在这位下层妇女过道隔壁座位的，恰好是一位从衣着、气质，以及一张戴眼镜的白皙的脸上看属于中产阶层的妇女，她也有一个大概是两三岁的小孩。</p>
-<p>这个中产小孩本来看上去很乖，安静地看着她妈妈拿给他的漫画书，间或稚气地问一些问题，而她妈妈总是很温柔耐心地回答。看得出她尽力保持着不打扰他人的意识，或许还有保持自身形象的克制。</p>
-<p>但她的小孩看到社会下层小孩放肆地吵闹，非常开心的样子，也受到了感染，便挣脱她的妈妈，跟着一起玩。</p>
-<p>这么一来，中产女性脸上的表情有了变化。</p>
-<p>在一开始，她并没有正视下层妇女和下层孩子的存在。他们在那儿吵闹、说话，似乎和她，以及她的小孩无关。这是两个相对隔离的世界，虽然大家在动车上相遇了，只有一个过道之隔。但当然，在下层妇女及其孩子的存在影响到她的时候，她的表情，还有目光，分明有着一种隐隐的鄙视。也许，从一开始，鄙视其实就已经存在于内心，只是没有在表情上显示出来。</p>
-<p>但随着她的孩子去和下层孩子玩，这两个相互隔离的世界被打破了。她换上了一副表情，目光主要看住自己的孩子，间或也礼貌性看一下下层妇女和她的小孩，露出了谨慎的友好的微笑。</p>
-<p>她当然并不愿意这个世界被打破。然而，她并没有呵斥小孩，不准去和下层小孩玩。这一POSE，大概说明了她和市侩，以及小土豪的分野。</p>
-<p>但下层妇女看见中产小孩和自己的小孩玩，中产女性也向自己这边投来友好的目光，似乎受到了某种激励——这一激励可以解释为终于被比自己阶层地位高的人看得起了，充分地释放出了她的友好，采用她所在的阶层所特有的表达方式，大大咧咧地撕开几个零食袋，一边拿给自己的小孩，一边拿给中产小孩，同时嘴巴里还对中产小孩说“吃”。</p>
-<p>中产女性明显并不愿意自己的小孩拿并吃这些零食。但“不愿意”表情在脸上的显示只有一秒，她应该很清楚直接拒绝并不礼貌，容易在下层妇女那儿引起“你看不起我”的心理后果。于是，她把自己小孩手上拿的零食收了起来，然后对下层妇女说“不用了，太感谢了”，再也不让小孩拿了。</p>
-<p>这是看不起人吗？是害怕劣质零食有问题吗？我估计在这方面，中产女性和下层妇女是无法相互理解的，很难对话。她们的生活方式没有重叠，也无法进入对方的内心世界。</p>
-<p>而从这个区别中，我痛苦地看，出身于社会下层的人们，除非有天赋，或者有强大的自我管理能力，在后天可以自我教育，自我成长，否则，在从小开始，家庭对他的言传身教中，他在头脑上、心理上，甚至人格上，已经形成了一种糟糕的应对这个世界的模式，层次和素质堪忧，有的一开始其实就已经输了。</p>
-<p>在这个世界上，有很多人瞧不起社会下层，瞧不起穷人，尤其是这两种人：刚脱贫不久的暴发户，他们在阶层地位上大概攀爬到了中产上层；在社会利益食物链上位于上端，靠压榨穷人维持自己奢侈生活的人，包括权力和资本阶层。</p>
-<p>前一种人瞧不起穷人很简单，是因为他们必须鄙视过去卑贱的自我，才能让自己意识到不再是过去那个穷人了，而有了一个“新自我”。后一种人鄙视穷人同样也不复杂，他们压榨穷人，其实是有负罪感和恐惧感的，掩饰这两种感觉的办法，就是鄙视。</p>
-<p>当然还有其它人瞧不起穷人，但都出奇一致：补偿。在心理食物链中，他们也被比他们阶层地位高、混得好的人瞧不起。这种感觉很难受，而补偿的办法就是去瞧不起在心理食物链条上位于他们下端的人，很不幸，穷人正位于下端。</p>
-<p>但不是所有的人，在所有时候，瞧不起社会下层，瞧不起穷人，都是想要在心理上吃掉他们来刷存在感、价值感。</p>
-<p>有一种瞧不起，是对素质的瞧不起，对社会下层的头脑、心理、人格层次的瞧不起。这种瞧不起虽然可以有衬托其身份优越感的心理效果，但主要的功能还是一种自保策略：避免沾上穷人的那种低档的存在方式，离得越远越好。</p>
-<p>故事中的中产女性，我想就是这样。</p>
-<p>她不想让小孩拿劣质零食，并把零食收起来，不让小孩吃，并不仅仅是担心不卫生，更重要的是不符合她对小孩的培养，触及到了她的价值观和生活方式。</p>
-<p>中产女性在培养小孩上，其精致细腻完全在下层妇女的想象之外，小孩能吃什么，不能吃什么，哪时候吃，都有一些讲究，根本不像下层妇女那样，只要喂饱就完事。</p>
-<p>根据从小的经验，以及现在的一些考察，我发现社会下层在“培养”小孩上，和喂养一群家畜家禽有某些相似，都是放任不管，喂饱了事，出问题了，再来管束一下，然后一切照旧。而如果他们真的很“爱”孩子的话，甚至还会放纵。</p>
-<p>另外，他们跟世界打交道的方式也直接传递到孩子身上。社会下层生活粗糙，采用的是直接、原始的语言、肢体动作去回应这个世界，显示自己在世界中的存在。不采用一套社会文化礼仪来包装的这种存在方式，都有一个特点：缺乏对自我和世界关系的反思。</p>
-<p>所以他们基本上不会去意识，自己的行为可能对他人意味着什么。</p>
-<p>一个小孩在这种家庭氛围中成长，会怎么样呢？</p>
-<p>（1）、在捕捉和领悟新事物上，会被别人甩出一条大街；（2）、缺乏自我反思能力；（3）、视野狭窄；（4）、对自己的行为在别人那儿意味着什么缺乏意识；（5）、不太具备一些被认为是“教养”的东西……它们都是一个人在这个社会中打拼的大忌。所以，除非是天才，除非拥有自我管理和自我教育能力，否则，一个人如果是出身社会下层，要突破阶层封锁，基本上要通过自我和人性去换。</p>
+<h3 id="发展心理学——人的毕生发展"><a href="#发展心理学——人的毕生发展" class="headerlink" title="发展心理学——人的毕生发展"></a>发展心理学——人的毕生发展</h3><blockquote class="blockquote-center"><p>季路问事鬼神。子曰：“未能事人，焉能事鬼？”敢问死。曰：“未知生，焉知死？”——论语</p>
+<p>“Memento mori”，拉丁语：记住你终有一死。</p>
 </blockquote>
-<p>这样的文章如今非常流行，它的写作套路大体是从日常生活中的某件小事出发，延伸到某一类社会群体，得到一些看上去很有道理的结论，再贴上一个标签化吸引眼球的标题。</p>
-<p>这里我并不想批判这类文体，相反，我觉得这类文体是有其存在的积极意义和商业价值的。它的积极意义在于，部分弥补了枯燥的学术研究和浅薄的个人经验之间的鸿沟。大部分人没有精力和耐心去看专业的心理学教材和研究论文，也没有金钱和资源获得专业的心理咨询，这种文章兼具文学作品的通俗易懂又有一定的思想深度，是一种有益的补充。它能够提醒人们注意日常生活的心理层面。</p>
-<p>比如，石勇在畅销书《世界如此险恶你要内心强大》提出了<strong>社会价值排序理论</strong>。</p>
-<blockquote class="blockquote-center"><p><strong>社会价值排序理论</strong>认为：如果我们心中根据社会的观念，形成了某种价值排序，比如认为白领比民工高档、大学生比小学生厉害。那么我们就会受到这种社会价值排序的操纵，就无法避免产生诸如焦虑、紧张、自卑之类的负面情绪。</p>
-</blockquote>
-<p>社会价值排序的观点认为，一旦一个人产生“战胜自己”才能获得成功的观点，那么他就已经输了。与自我为敌必然会导致自我的冲突和分裂。我们真正需要追求的是<strong>“洞悉外部世界用来控制、奴役我们的自我的东西，并且把它们从自我的结构里清除出去”</strong>。</p>
-<p>这样的观点是有一定道理的，但是无论是其产生还是论述都是基于个人经验主义，它只是指出了“是什么”和“为什么”，却难以促使读者形成具有实践指导意义的行动意志。这是这类心理学论述的局限性。</p>
-<h2 id="教育和成长中被忽视的心理动因"><a href="#教育和成长中被忽视的心理动因" class="headerlink" title="教育和成长中被忽视的心理动因"></a>教育和成长中被忽视的心理动因</h2><p>过去的一年里发生了很多热点事件，很多在层出不穷的大新闻中逐渐被人淡忘，但是有一些却具有非常重要的标志意义。比如最近的<strong>“北大留美学生写万字长文数落父母‘过度关爱’，12年春节不归”</strong>事件。新闻的当事人是每个家长心目中“别人家的孩子”，高考状元，北大学生，留学美国，每一个都是让人艳羡的标签，而其与父母的决裂却也是每一个家长心中最隐秘的恐惧。</p>
-<p>这里贴出这篇万字长文的原文作为存档，电脑版读者可点击左侧导航条跳过此节：</p>
-<blockquote>
+<p>东西方对生死有着截然不同的态度，在我们的文化里死亡是一种禁忌，单单将死这个字说出来就是犯忌的。而在西方文化里，死亡似乎只是一种必由的结局。充满鬼怪骷髅的万圣节变成了一种娱乐。</p>
+<p>我们该如何看待我们的一生？这个问题在人生的两端，青年和老年，被思考的最多。青年人踌躇满志，对人生充满憧憬，老年人尘埃落定，回眸人生。</p>
+<p>当家长们受困于与子女们沟通时，或许可以回头看看，自己是怎么和自己的父母沟通的。我们能走出自己人生特定阶段赋予我们的思维定势，走进另一段人生的精神世界吗？或许我们可以尝试从发展心理学中寻求帮助。</p>
+<h2 id="从心理视角破解中国式家长困局"><a href="#从心理视角破解中国式家长困局" class="headerlink" title="从心理视角破解中国式家长困局"></a>从心理视角破解中国式家长困局</h2><p>什么样的家庭教育是成功地家庭教育？或者说家庭教育的最终目的是什么？从需求层次论的视角来回答，就是：引导孩子走向自我实现之路。具体来说，就是在保障其生理需求、安全需求、归属与爱的需求和自尊需求的基础上，引导其产生知、美和自我实现的需求，进而最终以自我实现为自发的人生目标。</p>
+<p>如何播撒下自我实现的种子呢？营造“顶峰体验”是一个有效的手段，可以将之作为一个阶段性的目标。获得“顶峰体验”，需要实现如下图所示的正反馈循环：</p>
+<div id="flowchart-0" class="flow-chart"></div>
+
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="万字长文"><a href="#万字长文" class="headerlink" title="万字长文"></a><a name="wziw">万字长文</a></h3><blockquote>
 <p><strong>一、起源</strong></p>
 <p><strong>男孩子</strong></p>
 <p>我是80后，男性，来自小城清阳（化名），在一个驻当地的上级直属事业单位成长。父母都是体制内普通人，文化程度在同龄人里较高。</p>
@@ -615,24 +844,85 @@
 <p>这篇文字里的部分内容，我以“为将来而记下的过去”为题发给过很多同辈朋友，希望他们“平等友善地和娃们沟通与交流”（一个朋友的回复）。我们和我们的子女大部分是普通人，然而，再普通的生命，也应当身为人而得到尊重，也有资格追求安宁或精彩的生活。</p>
 <p>谨以此文献给重拾梦想的时刻，并纪念我所有的成就、努力、幸运、错误、迷茫和伤痛。</p>
 </blockquote>
-<p>这篇文章抛出了一个广泛存在却又被有意无意忽视的问题，即中国式的“父母-子女”关系。与之相关的新闻、事件还有很多，比如更少人知、更耸人听闻的<strong>“北大吴谢宇弑母案”</strong>。</p>
-<blockquote>
+<h3 id="北大吴谢宇弑母案"><a href="#北大吴谢宇弑母案" class="headerlink" title="北大吴谢宇弑母案"></a><a name="uma">北大吴谢宇弑母案</a></h3><blockquote>
 <p>2016年2月14日，警方在福州市晋安区桂山路172号的教职工宿舍5座102单元住处内发现了被杀人谢天琴的尸体。让人震惊的是谢天琴的尸体被塑料薄膜大概裹了有一百多层，每一层中间还细心地放有活性炭吸味道，整个房间密封得很好，所以，即使已经过去半年了，邻居依然不知道自己隔壁有一具尸体在静静腐烂，更让警察震惊的是，房间还有装有远程监控摄像头，也就是说，装这个设备的人只要在有信号的地方，可以随时监控家里的一举一动。</p>
 <p>唯一的嫌疑人，就是谢天琴的儿子吴谢宇不知所踪。谢天琴是当地一所中学的历史老师，丈夫在2010年癌症去世，和儿子吴谢宇相依为命。吴谢宇是有名的学霸，因为成绩优异而保送进北京大学，今年是大三。</p>
 <p>在2015年7月的时候，吴谢宇告诉所有亲戚，自己去美国做交换生，带着妈妈一起去，将在7月底出发。事实是，经过法医鉴定，吴谢宇在7月11日就把谢天琴杀死了。所有亲戚都以为母子两去美国了，没有一个人察觉到不对劲。一直到今年2月5号，吴谢宇发了消息给舅舅说他们今天回国过年，舅舅没有接到人，再打电话就关机了，一直到过完年14号，片警第一天上班。舅舅忍不住了，觉得肯定有问题，打开大门才发现尸体。</p>
 <p>然而吴谢宇从2月5号之后就完全失踪了，到现在也没有找到。通缉令上还有吴谢宇2月4号在ATM取款的照片。</p>
+<p>高中同学对吴谢宇的映象：</p>
+<p>学习、生活很自律，有宏伟的理想抱负，有清晰的人生规划，有铁一般的执行纪律。同宿一年，作息时间、学习时间、锻炼时间几乎雷打不动。我很担心我这样会把他描述成冷酷的机器形象，而事实上他是宿舍夜聊各种段子的分享者，在班里也经常玩着各种冷幽默<br>人际交往上，不求回报的付出。说真的我相信很多人都曾在意想不到的时刻收到他的帮助，因为我自己也曾无数次被温暖到。说真的，从前自己那些细微的情绪能被注意到，并能被帮助到，真的是从天而降的温暖<br>集体活动上，高一的班没有他我相信拿不到那么多的成就。我忘不了他高高地走在班级最前面，玩着各种幽默然后带着大家一起做一件又一件事情的身影。对高二高三他的班级，他也是带着他们班很开心的前进。</p>
 </blockquote>
-<p>其他的引起广泛讨论的还有<strong>杨永信电击治疗网瘾少年</strong>和<strong>豫章书院</strong>事件。</p>
-<p>这类事件的共同点都是家长对子女的控制欲和子女的自由意志之间的矛盾，这种矛盾既存在于顶尖学府里的“完美学生”中，也存在于垃圾学校里的“问题少年”里。这些事件之所以引起了广泛的关注，在于它们的最终的结果，两代人之间的严重对立，这种对立或体现在绝交、或体现在肉体的消失。对于每一个准家长或现家长，我们必须反思、吸取教训、避免重蹈覆辙；而对于每一个子女或对立关系里弱势的一方，我们同样需要反思、寻找问题的有效出路、避免走向极端。</p>
-<p>我认为这些问题的根源可以追溯到两个方面：</p>
-<ul>
-<li>对客观世界的认知偏差。</li>
-<li>失去了与自我内心的联系。</li>
-</ul>
-<h3 id="如何认识和反馈客观世界"><a href="#如何认识和反馈客观世界" class="headerlink" title="如何认识和反馈客观世界"></a>如何认识和反馈客观世界</h3><p>人们接触的信息越来越多，获取知识越来越容易，沟通交流越来越便捷，可是思考、审视却越来越少。我们对于大部分信息总是停留在肤浅的、情绪化的理解之中，而忽略了科学理性思维的重要性。</p>
-<h3 id="如何与自我内心沟通"><a href="#如何与自我内心沟通" class="headerlink" title="如何与自我内心沟通"></a>如何与自我内心沟通</h3><p>当今社会，缺乏<strong>同理心</strong>的人越来越多。最近的一些事件集中体现了这一点，比如：<a href="http://news.ynet.com/2018/01/31/913068t70.html" target="_blank" rel="noopener">成都女子捡狗索筹不成摔狗</a>，<a href="https://baike.baidu.com/item/%E5%88%98%E9%91%AB/22205029" target="_blank" rel="noopener">刘鑫案</a> ，<a href="http://news.ycwb.com/2018-01/10/content_25874224.htm" target="_blank" rel="noopener">高铁拦车等人</a>等等。日常生活中纵容小孩大声喧哗吵闹、公共场合大声公放视频等行为也屡见不鲜。这些不顾他人感受的行为往往被理解为社会公德的范畴，然而，我觉得这反映了一个更为深刻的问题，那就是大部分人逐渐失去了与自我的联系，失去了与自我内心痛苦的联系、也失去了与自己过去的联系。</p>
-<p>忘记了苦痛，便忘记了真情实感，而只剩下利益得失。忘记了过去，便忘记了弱势、谨慎、自由为何物。</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">摘自MBA智库百科。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">摘自<a href="https://www.zhihu.com/question/19990792" target="_blank" rel="noopener">知乎</a>的回答。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">摘自<a href="http://blog.sina.com.cn/s/blog_5cceca3e0102vgs4.html" target="_blank" rel="noopener">石勇的新浪微博</a>。</span><a href="#fnref:3" rev="footnote"> ↩</a></li></ol></div></div></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+<h3 id="父亲将十四岁早恋女儿打住院"><a href="#父亲将十四岁早恋女儿打住院" class="headerlink" title="父亲将十四岁早恋女儿打住院"></a><a name="dvy">父亲将十四岁早恋女儿打住院</a></h3><p><a href="https://wx4.sinaimg.cn/large/005Hk6S7gy1fo2cal3839j30df7s1qv6.jpg" class="gallery-item" target="_blank" rel="noopener"><img src="https://wx4.sinaimg.cn/large/005Hk6S7gy1fo2cal3839j30df7s1qv6.jpg" alt=""></a></p>
+<h3 id="李松蔚对父亲将女儿打住院事件的观点"><a href="#李松蔚对父亲将女儿打住院事件的观点" class="headerlink" title="李松蔚对父亲将女儿打住院事件的观点"></a><a name="dvytl">李松蔚对父亲将女儿打住院事件的观点</a></h3><blockquote>
+<p><strong>知乎用户：李松蔚</strong><sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></p>
+<p>看到这篇帖子，感到非常痛心。</p>
+<p>想起来，有一次参加一个讲座，一个心理学家讲家庭治疗。提问环节有一位上了年纪的阿姨举手。她说她是一个中学老师，她的困惑在于「不知道该怎么管现在的孩子」。以前还可以打骂，可以体罚，孩子对老师都服服帖帖的。现在只靠讲道理，有的孩子听你讲，有的孩子根本就不听。她诚实地说，她认为现在的方式比以前文明了，进步了。但是，有的孩子真的就没办法管了。</p>
+<p>那个讲座的专家，是个德国人。她的回答也很有意思。她说，她在德国也会遇到父母管不住孩子，那她就问那些父母：「你是怎么做到让自己管不住的呢？你那么高，对方那么矮；你那么有经验，对方那么稚嫩；你经历的事情那么多，有钱，又有资源，对方什么都没有。你怎么可能比他还没办法？」</p>
+<p>提问的阿姨怏怏地坐下了。可以看出，那个专家的回答，没有完全澄清她的困惑。我理解那个专家的意思，如果两个人卯上了，在一个正常的关系语境里，一个大人，一个小孩，一个老板，一个雇员，一个智者，一个学徒，这个力量的差距可以说是很悬殊的，稳的。说前者搞不定后者，不存在的。只要肯想办法，基本都能搞定。但是这种态度，是建立在一个前提之上的——</p>
+<p><strong>你要真的，把对方当成一个斗智斗勇的「人」</strong>。</p>
+<p>我这句话没有讽刺的意思。仅仅是就事论事，所谓斗智斗勇，其实就是当成一个平等交往的对象。中国的家庭文化，是不跟孩子讲平等的。典型的就是很多大人挂在嘴边的：「你一个孩子懂什么？」「他还是一个孩子，跟他废什么话？」孩子幼稚，冲动，没脑子，不负责，而且最重要的是，欠打。</p>
+<p>做错事了？正常，孩子嘛！打就是了。</p>
+<p>不是一个值得认真对待的「人」。</p>
+<p>在很多大人看来，孩子是这样一个物种：脑子不成熟，要打，他才记得住。打孩子有点粗暴，但它是最有效的。它用物理手段直接修正这些生物的行为，以符合大人的意志。孩子怎么想不重要，没什么打一顿改变不了的想法，如果有，那就打两顿。——这种信念刻在我们的文化基因里。即使我们不打孩子，我们也相信，那是出于文明或爱心，暂时封禁了「最有效」的管教手段。</p>
+<p>事急从权，逼急了还是得祭出这个法宝。</p>
+<p>讲道理可不可以呢？可以，但是效果差一些，而且费事。你讲了他不听呢？实话实说，所有不用「打」的方式都有点费事。这就是为什么很多人不愿把孩子当「人」。免得麻烦。假如把他当成跟自己平等的存在，对手也好，伙伴也好，你就必须花心思跟他周旋。一来没这个时间，二来似乎也没必要。</p>
+<p>否则的话，你又想要这个人听话（毕竟你很清楚，她现在的很多冲动，会让她后悔一生），又不能打，怎么可能不费事？好话歹话都说尽了，她就是不听。这时候，要么挖空心思去找别的办法，要么就回到更简单的思路：</p>
+<p>「我给你脸了是不是！你以为我不敢打你？」</p>
+<p>「打」可以最快地解决问题。这是一种<strong>路径依赖</strong>的操作：</p>
+<blockquote>
+<p>孩子为什么不听话？因为你不打！<br>好好讲道理没用？那就打！<br>打了没用？那是因为打得不够狠！</p>
+</blockquote>
+<p>这种路径依赖特别可怕，因为每当遇到问题的时候，中国家长的思维不是去想「一定存在别的办法解决这个问题」，而是去想「何必舍近求远！打到位了，什么问题都解决了。」——这是一种很难被反驳的自证循环。</p>
+<p>德国专家的回答是这么个意思：你比他大那么多，你总是有办法的。</p>
+<p>而中国家长的困惑在于：除了打，我真没有（省事的）办法！</p>
+<p>这件事不能怪他们，怪就怪他们对于「办法」的经验太少。代代相传，都是靠暴力镇压的思路解决问题。没有别的办法，是因为从没有想过别的办法。——或者也想过，但往往是浅尝辄止地试了试，又回到了老路。</p>
+<p>请务必记住，对亲子关系来说，最有害的想法就是：「打是解决问题的最高手段」。哪怕你自己不用这个手段，这样的想法仍然会限制你。</p>
+<p>当你对这种想法（再次强调，哪怕你不打）形成了路径依赖，一旦孩子遇到问题，你的思考方向就变成了「究竟是打还是不打，打到什么程度合适」，然后打也不是，不打也不是。而你陷在这里，却不去想「还有什么别的解决方法」。这就大大窄化了你们的关系。就像那个提问的阿姨，她真诚地感到困惑，是因为看不到这个世界上<strong>有一些方法，是不用打，也可以管住孩子的</strong>。</p>
+<p>要找到这些方法，你必须先相信，打孩子并非解决问题之道，无论它看起来多么管用。孩子是靠语言来沟通的人，而不是靠拳脚来管教的动物。</p>
+<p>然后你要相信：你跟孩子之间，是有其它办法的。</p>
+<p>回到这个具体的例子吧，我有几点建议：</p>
+<p><strong>第一，制定大的原则。</strong></p>
+<p>如果把孩子当成一个平等的「人」。她谈不谈恋爱，跟谁谈，怎么谈，原本都是她自己的事。家长过度干涉，费力不讨好，还容易引起反效果。这是基本的边界意识，跟青春期孩子打交道的时候，尤其要注意这一点。把孩子的权利还给她，作为家长只管最重要的事，那就是不能让他们在这个年纪发生性关系。——两个问题是分开的：你恋爱是你的事，我们只禁止你发生性关系。</p>
+<p>作为一个原则，这样比较容易达成共识。</p>
+<p>但在实际操作中，家长很容易打破这个原则。他们总是看恋爱这事不顺眼：「你看，成绩下降得这么差了，所以说不要再谈恋爱了！」这样一来，破坏了跟孩子的同盟关系，双方站到对立面上。原有的共识也就被打破了。</p>
+<p>如果要关心成绩，当然也可以：「你的成绩下降这么厉害，要怎么赶上？」一起商量一些提高成绩的措施。不用跟恋爱扯上关系，更犯不着因此棒打鸳鸯。各是各的事：恋爱可以谈，学习要搞好，性的大原则绝对不能突破。</p>
+<p><strong>第二，行使管理的功能。</strong></p>
+<p>制定了原则，并不意味着就一劳永逸。这件事家长是要管的。</p>
+<p>什么叫管呢？回到前面的路径依赖，再次强调：管并不是打。不妨这样想：如果一个远方的朋友，把他们女儿送到你家寄宿一年。现在她恋爱了，朋友嘱咐你，千万要把她看好。你会怎么做呢？你不能只是停留在讲道理，也不能简单地把她揍一顿，这时候你会对她做些什么？那些做法就是「管理」。</p>
+<p>假如，这个女孩跟男友夜不归宿，怀孕了。你朋友打电话来：「你怎么管的！」你不可能告诉他：「哥们，我尽力了。我之前跟她谈过话，该说的我都说到了。我唯一没做的就是揍她一顿。」但人家不在乎这个，人家问的是：</p>
+<blockquote>
+<p>你们谈话的时候，有达成一致吗？<br>这件事只是彻头彻尾的意外，还是早有苗头？<br>事态演变到这个程度之前，你采取了哪些预防措施？<br>出事那天晚上，我女儿是怎么从你家跑出去的？你们家对于出门有哪些具体的管理规则？她出门之前有没有告诉你们去哪？几点回家？<br>发现她撒谎，有哪些具体的惩罚措施？<br>那一天你们有没有跟她发生过争吵？<br>平时关系如何？积累的矛盾是否有妥善处理？<br>……</p>
+</blockquote>
+<p>当然了，你不需要为朋友的女儿承担这么多责任。之所以做这个假设，是要你不能轻易去打她，你把她看成一个让人头疼的，又不得不好生对待的大姑娘。这个前提下，你仍然可以做很多事，来预防最坏的结果。不是吗？</p>
+<p><strong>第三，不要寄希望于一次解决问题。</strong></p>
+<p>其实，不管给出什么建议，一定都会有人说：「没有那么简单……」</p>
+<p>这是真的，也是对的。有时候我们就是太想追求一种简单的方法了。说一句什么，或者做一点什么，问题一下子就解决了。这是一个幻想。</p>
+<p>幻想的另一面是挫败。越是抱着不切实际的幻想，越容易剑走偏锋。</p>
+<p><strong>最后，我还想说一说孩子的「自爱」。</strong></p>
+<p>在这个例子中，父亲生气，是因为女儿不知道「自爱」。这让他产生了动手的冲动，好像揍一顿就可以把「自爱」揍出来一样。这很悲哀。</p>
+<p>一方面，不见得是「自爱」的问题。随随便便把这事贴上一个「不知自爱」的标签，带着强烈的贬低意味，不一定有助于解决问题。另一方面，我想说的是，就算「不知自爱」好了，那是一个结果。导致这个结果的，是她之前经历的各种事情，包括家庭的养育。对这些经历视而不见，只是对「不知自爱」的结果动气，就好像一个人考试不及格，就一味地抽打那张试卷一样可笑。</p>
+<p>你不可能把人打得「自爱」的。倒是反过来，暴力会让她更不自爱。</p>
+<p>需要考虑的，倒是如何在平时的生活中，让女儿感受到自己的价值，至少在父母面前。这个妈妈在帖子里，记录了她跟女儿的一段对话：</p>
+<blockquote>
+<p>妈妈：你们俩以后想过什么样的生活呢？<br>女儿：我要和她浪迹天涯，走遍世界。<br>妈妈：浪迹天涯啊，好浪漫啊，但是你可能没地方洗澡，洗头发，洗衣服，经常要脏脏臭臭的。<br>女儿：不是啊，我们会住酒店。<br>妈妈：那需要很多钱啊，你打算怎么挣钱呢？<br>……</p>
+</blockquote>
+<p>我读到这里的时候，心想：父母一味泼冷水，矮化女儿的选择，哪里有宠爱的感觉？下次也许可以试试这么说：「你走了，我们会很想你。」</p>
+<p>还可以说：「你一定要好好照顾自己，每天给我们打电话，路上要住最好的酒店。爸爸妈妈给你钱，但是你自己留心点，不要被他骗了。」</p>
+<p>是我的话，还会强调：「他对你不好，告诉我，我会打得他满地找牙。」</p>
+<p>话说回来，我自己也是一个父亲，女儿现在还小。但我读到这篇帖子，似乎完全理解，一个父亲的心中有多么狂怒，多么自责，偏偏又拿这一切毫无办法。这是一场漫长的挫败，我可以想象以各种方式发泄这种挫败：拿着球棒砸窗户，砸家具，砸车，砸那个男孩……甚至砸我自己，都可以理解。但既然我们讨论到「自爱」的话题，那我就一定会向我的女儿道歉：「无论如何，无论事情严重到何种程度，我都不该把球棒抡向你。那是一个不可原谅的错误。」</p>
+<p>在我心里，我无论如何要传递给她的信息是：「<strong>是你，你比世上的一切更珍贵。</strong>」</p>
+</blockquote>
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 设置具有挑战性的目标
+op1=>operation: 主动探索
+op2=>operation: 努力实现
+cd=>condition: 实现
+op4=>subroutine: 获得奖励
+io=>inputoutput: 自发制定更高目标
+
+st->op1->op2->cd
+cd(no)->op1
+cd(yes)->op4->io</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">摘自MBA智库百科。</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">摘自<a href="https://www.zhihu.com/question/19990792" target="_blank" rel="noopener">知乎</a>的回答。</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">3.</span><span style="display: inline-block; vertical-align: top;">摘自<a href="http://blog.sina.com.cn/s/blog_5cceca3e0102vgs4.html" target="_blank" rel="noopener">石勇的新浪微博</a>。</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">4.</span><span style="display: inline-block; vertical-align: top;">摘自<a href="http://daily.zhihu.com/story/9670223?utm_campaign=in_app_share&amp;utm_medium=Android&amp;utm_source=com.tencent.mm.ui.tools.AddFavoriteUI" target="_blank" rel="noopener">知乎日报</a>。</span><a href="#fnref:4" rev="footnote"> ↩</a></li></ol></div></div></p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
         };
@@ -653,49 +943,6 @@
             <tag> 经验 </tag>
             
             <tag> 人生 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[科研工具软件的用户需求分析]]></title>
-      <url>/2018/02/05/%E7%A7%91%E7%A0%94%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E7%9A%84%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/</url>
-      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p="">This is the archive for Scientific Research Studio Project.<p></p>
-<a id="more"></a>
-<h1 id="单一组件"><a href="#单一组件" class="headerlink" title="单一组件"></a>单一组件</h1><h2 id="API接口工具"><a href="#API接口工具" class="headerlink" title="API接口工具"></a>API接口工具</h2><h3 id="Altermetric"><a href="#Altermetric" class="headerlink" title="Altermetric"></a><a href="https://www.altmetric.com/" target="_blank" rel="noopener">Altermetric</a></h3><p>提供文章的社交媒体数据，使用详情页：<a href="http://api.altmetric.com/embeds.html。" target="_blank" rel="noopener">http://api.altmetric.com/embeds.html。</a></p>
-<h2 id="浏览器插件工具"><a href="#浏览器插件工具" class="headerlink" title="浏览器插件工具"></a>浏览器插件工具</h2><h3 id="unpaywall"><a href="#unpaywall" class="headerlink" title="unpaywall"></a><a href="http://unpaywall.org/" target="_blank" rel="noopener">unpaywall</a></h3><p>合法的开放获取文献下载插件</p>
-<h2 id="相关组织"><a href="#相关组织" class="headerlink" title="相关组织"></a>相关组织</h2><h3 id="ImpactStory"><a href="#ImpactStory" class="headerlink" title="ImpactStory"></a><a href="https://impactstory.org/" target="_blank" rel="noopener">ImpactStory</a></h3><h1 id="路线图"><a href="#路线图" class="headerlink" title="路线图"></a>路线图</h1><ul>
-<li style="list-style: none"><input type="checkbox" checked> 现有工具总结</li>
-<li style="list-style: none"><input type="checkbox"> 用户需求分析</li>
-<li style="list-style: none"><input type="checkbox"> 桌面软件开发基础</li>
-<li style="list-style: none"><input type="checkbox"> 数据库设计</li>
-<li style="list-style: none"><input type="checkbox"> 界面设计</li>
-<li style="list-style: none"><input type="checkbox"> 软件体系设计</li>
-</ul>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>]]></content>
-      
-        <categories>
-            
-            <category> Research </category>
-            
-            <category> Tools </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 科研 </tag>
-            
-            <tag> 工具 </tag>
-            
-            <tag> 总结 </tag>
             
         </tags>
         
@@ -2060,7 +2307,9 @@
 <li>允许考生携带两台图形计算器，但不允许在考场上借用其它同学的图形计算器。</li>
 <li>图形计算器记忆器中存储的数据和程序进入考场前清空。下表带星（*）号的图形计算器型号内置了记忆功能。</li>
 </ol>
-<h2 id="计算器模拟软件"><a href="#计算器模拟软件" class="headerlink" title="计算器模拟软件"></a>计算器模拟软件</h2></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+<h2 id="计算器模拟软件"><a href="#计算器模拟软件" class="headerlink" title="计算器模拟软件"></a>计算器模拟软件</h2><p>为了方便学习如何使用计算器，我们在购买之前可以先行下载相关的模拟软件。这里是德州仪器最先进的计算器TI-Nspire的下载地址和使用说明：链接：<a href="https://pan.baidu.com/s/1c4k3T2g" target="_blank" rel="noopener">https://pan.baidu.com/s/1c4k3T2g</a> 密码：en7m。</p>
+<p>除此之外，虽然无法在考试中使用，但是我推荐日常学习时可以使用Geogebra和Wolfram Alpha，这两个软件可以方便直观地完成函数绘图，计算等任务。</p>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
         };
@@ -2069,7 +2318,7 @@
       
         <categories>
             
-            <category> AP </category>
+            <category> Teaching </category>
             
         </categories>
         
@@ -2117,10 +2366,10 @@ your browser does not support the video tag
 <h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="430" height="86" src="//music.163.com/outchain/player?type=2&id=114389&auto=0&height=66"></iframe>
 
-<h1 id="依赖插件的交互功能"><a href="#依赖插件的交互功能" class="headerlink" title="依赖插件的交互功能"></a>依赖插件的交互功能</h1><h2 id="交互式echarts图形"><a href="#交互式echarts图形" class="headerlink" title="交互式echarts图形"></a>交互式echarts图形</h2><div id="echarts2125" style="width: 81%;height: 400px;margin: 0 auto"></div>
+<h1 id="依赖插件的交互功能"><a href="#依赖插件的交互功能" class="headerlink" title="依赖插件的交互功能"></a>依赖插件的交互功能</h1><h2 id="交互式echarts图形"><a href="#交互式echarts图形" class="headerlink" title="交互式echarts图形"></a>交互式echarts图形</h2><div id="echarts8650" style="width: 81%;height: 400px;margin: 0 auto"></div>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts2125'));
+        var myChart = echarts.init(document.getElementById('echarts8650'));
 
         // 指定图表的配置项和数据
         var option = {
