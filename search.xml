@@ -3,15 +3,35 @@
   
     
     <entry>
-      <title><![CDATA[高效能人士的七个习惯]]></title>
+      <title><![CDATA[The 7 Habits of Highly Effective People]]></title>
       <url>/2018/02/10/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%84%E4%B8%83%E4%B8%AA%E4%B9%A0%E6%83%AF/</url>
-      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <="" div=""><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+      <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p=""><em>There is no real excellence in all this world which can be separated from right living.</em><p></p>
+<a id="more"></a>
+<h1 id="Paradigms-and-Principles"><a href="#Paradigms-and-Principles" class="headerlink" title="Paradigms and Principles"></a>Paradigms and Principles</h1><h2 id="Inside-Out"><a href="#Inside-Out" class="headerlink" title="Inside-Out"></a>Inside-Out</h2><p>To change our situation, we first had to change ourselves. And to change ourselves, we first had to change our perceptions.</p>
+<p><strong>Paradigm</strong> is commonly used to mean a model, theory, perception, assumption, or frame of reference. In the more general sense, it is the way we <em>see</em> the world, not in the terms of our visual sense of light, but in terms of perceiving, understanding, interpreting.</p>
+<p>Paradigm is like a map. If we do not have the right map, we will never arrive at the destination.</p>
+<p>Maps in our head can be divided into two main categories: maps of the way things are, or realities, and maps of the way things should be, or values. We interpret everything we experience through these mental maps.</p>
+<h1 id="Private-Victory"><a href="#Private-Victory" class="headerlink" title="Private Victory"></a>Private Victory</h1><h1 id="Public-Victory"><a href="#Public-Victory" class="headerlink" title="Public Victory"></a>Public Victory</h1><h1 id="Renewal"><a href="#Renewal" class="headerlink" title="Renewal"></a>Renewal</h1></div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
         };
         lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script></div>]]></content>
+        }</script>]]></content>
       
+        <categories>
+            
+            <category> Reading </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Notes </tag>
+            
+            <tag> Reading </tag>
+            
+        </tags>
         
     </entry>
     
@@ -2339,7 +2359,13 @@ cd(yes)->op4->io</textarea><textarea id="flowchart-0-options" style="display: no
       <title><![CDATA[Markdown渲染引擎测试]]></title>
       <url>/2018/01/14/test-md/</url>
       <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p="">此页面主要用于测试hexo的Markdown渲染引擎显示效果。$\latex$<br>请使用基于<em>Chrome</em>的浏览器打开<br><a id="more"></a><p></p>
-<h1 id="富文本"><a href="#富文本" class="headerlink" title="富文本"></a>富文本</h1><h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>公式测试：\( y=x^2 \)<br>行间公式:<br>$$y=\frac{1}{2}E_x^2$$<br>行内公式: $y=x^2$</p>
+<h1 id="富文本"><a href="#富文本" class="headerlink" title="富文本"></a>富文本</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2>
+
+<link href="https://www.hanyi.studio/WebFonts/C3DB971E-443B-4D37-887D-530EE441EB6B/201802/css/5E07A0EE22CE1DAE.css" rel="stylesheet" type="text/css">
+<div class="css5E07A0EE22CE1DAE"><font size="20" color="red">WebFont中文字体测试</font></div>
+
+
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>公式测试：\( y=x^2 \)<br>行间公式:<br>$$y=\frac{1}{2}E_x^2$$<br>行内公式: $y=x^2$</p>
 <h2 id="自定义Tag"><a href="#自定义Tag" class="headerlink" title="自定义Tag"></a>自定义Tag</h2><ul>
 <li><a href="http://shields.io/" target="_blank" rel="noopener">徽章</a>:<a href="https://img.shields.io/badge/API-Ready-blue.svg" class="gallery-item" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/API-Ready-blue.svg" alt=""></a></li>
 <li><a href="https://github.com/fehmicansaglam/progressed.io" target="_blank" rel="noopener">进度条</a>:<a href="http://progressed.io/bar/28?title=progress" class="gallery-item" target="_blank" rel="noopener"><img src="http://progressed.io/bar/28?title=progress" alt=""></a></li>
@@ -2355,7 +2381,7 @@ cd(yes)->op4->io</textarea><textarea id="flowchart-0-options" style="display: no
 </blockquote>
 <h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> love</span><br><span class="line"><span class="keyword">namespace</span> <span class="title">hexotest</span>&#123;</span><br><span class="line">        <span class="keyword">class</span> <span class="title">Program</span>      </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">enum</span> GameState:<span class="keyword">byte</span>                               <span class="comment">//（：byte）是我把它的默认类型改成成了byte(类型可以自己定),默认为整形  </span></span><br><span class="line">       &#123;    </span><br><span class="line">            GameExit,      </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">static</span> GameState gameState =GameState.GameStart;  <span class="comment">//声明一个枚举变量并给它初始化赋值  </span></span><br><span class="line">          </span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)  </span></span><br><span class="line"><span class="function">        </span>&#123;  </span><br><span class="line">            <span class="keyword">switch</span>(gameState)  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="keyword">case</span> GameState.GameStart:  </span><br><span class="line">                    Console.WriteLine(<span class="string">"游戏开始&#123;0&#125;"</span>,gameState);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">                <span class="keyword">case</span> GameState.GameExit:  </span><br><span class="line">                    Console.WriteLine(<span class="string">"游戏开始对应的值：&#123;0&#125; 名称&#123;1&#125;"</span>, (<span class="keyword">byte</span>)gameState, gameState);  </span><br><span class="line">                    <span class="keyword">break</span>;  </span><br><span class="line">            &#125;            </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">this</span> <span class="keyword">is</span> csharp code</span><br></pre></td></tr></table></figure>
 <h2 id="矢量svg图片"><a href="#矢量svg图片" class="headerlink" title="矢量svg图片"></a>矢量svg图片</h2><p>直接使用Markdown语法以图片插入，也可以选择源代码插入，和HTML标签引入。<br><a href="/images/geogebra-export.svg" title="svg图片" class="gallery-item"><img src="/images/geogebra-export.svg" alt="svg图片"></a></p>
-<h1 id="多媒体"><a href="#多媒体" class="headerlink" title="多媒体"></a>多媒体</h1><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>传入存储在腾讯云的外链图片<br><a href="https://jerryhexo-1255752747.cos.ap-chengdu.myqcloud.com/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87PNG.png" title="图片测试" class="gallery-item" target="_blank" rel="noopener"><img src="https://jerryhexo-1255752747.cos.ap-chengdu.myqcloud.com/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87PNG.png" alt="图片测试"></a></p>
+<h1 id="多媒体"><a href="#多媒体" class="headerlink" title="多媒体"></a>多媒体</h1><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>传入存储在腾讯云的外链图片<br><a href="https://jerryhexo-1255752747.cos.ap-chengdu.myqcloud.com/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87PNG.png&quot;图片测试&quot;" class="gallery-item" target="_blank" rel="noopener"><img src="https://jerryhexo-1255752747.cos.ap-chengdu.myqcloud.com/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87PNG.png&quot;图片测试&quot;" alt=""></a></p>
 <h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><h3 id="存储在私有腾讯云中的视频"><a href="#存储在私有腾讯云中的视频" class="headerlink" title="存储在私有腾讯云中的视频"></a>存储在私有腾讯云中的视频</h3>
 <video src="https://jerryhexo-1255752747.cos.ap-chengdu.myqcloud.com/%E5%AD%98%E6%A1%A3/%E8%A7%86%E9%A2%91/top10000career-trajectory.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;">
 your browser does not support the video tag
@@ -2366,10 +2392,21 @@ your browser does not support the video tag
 <h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="430" height="86" src="//music.163.com/outchain/player?type=2&id=114389&auto=0&height=66"></iframe>
 
-<h1 id="依赖插件的交互功能"><a href="#依赖插件的交互功能" class="headerlink" title="依赖插件的交互功能"></a>依赖插件的交互功能</h1><h2 id="交互式echarts图形"><a href="#交互式echarts图形" class="headerlink" title="交互式echarts图形"></a>交互式echarts图形</h2><div id="echarts8650" style="width: 81%;height: 400px;margin: 0 auto"></div>
+<h1 id="页面效果"><a href="#页面效果" class="headerlink" title="页面效果"></a>页面效果</h1><h2 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h2><div class="tabs" id="选项卡"><ul class="nav-tabs"><li class="tab"><a href="#选项卡-1">选项卡 1</a></li><li class="tab active"><a href="#选项卡-2">选项卡 2</a></li><li class="tab"><a href="#选项卡-3">选项卡 3</a></li></ul><div class="tab-content"><div class="tab-pane" id="选项卡-1"><p><strong>这是选项卡 1</strong><br>呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈呵呵哈哈哈哈哈哈哈哈……</p>
+</div><div class="tab-pane active" id="选项卡-2"><p><strong>这是选项卡 2</strong></p>
+</div><div class="tab-pane" id="选项卡-3"><p><strong>这是选项卡 3</strong><br>哇，你找到我了！φ(≧ω≦*)♪～</p>
+</div></div></div>
+<h2 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h2><a class="btn" href="https://www.baidu.com" target="_blank" rel="noopener"><i class="fa fa-download fa-lg fa-fw"></i>点击访问百度</a>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><span class="label primary">primary</span>
+<h2 id="Font-Awesome图标"><a href="#Font-Awesome图标" class="headerlink" title="Font Awesome图标"></a>Font Awesome图标</h2><ul>
+<li><i class="fa fa-pencil"></i> 铅笔</li>
+<li><i class="fa fa-cloud-upload"></i> 上传</li>
+<li><i class="fa fa-download"></i> 下载</li>
+</ul>
+<h2 id="交互式echarts图形"><a href="#交互式echarts图形" class="headerlink" title="交互式echarts图形"></a>交互式echarts图形</h2><div id="echarts5512" style="width: 81%;height: 400px;margin: 0 auto"></div>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts8650'));
+        var myChart = echarts.init(document.getElementById('echarts5512'));
 
         // 指定图表的配置项和数据
         var option = {
