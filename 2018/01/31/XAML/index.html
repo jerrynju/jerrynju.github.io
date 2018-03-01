@@ -82,16 +82,16 @@
 
 <meta name="keywords" content="学习笔记,WPF,程序开发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《深入浅出WPF》学习笔记——XAML详解">
+<meta property="og:title" content="深入浅出WPF">
 <meta property="og:url" content="https://jerrynju.github.io/2018/01/31/XAML/index.html">
 <meta property="og:site_name" content="Jerry&#39;s Blog">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://jerrynju.github.io/XAML-01.png">
 <meta property="og:image" content="https://jerrynju.github.io/XAML-02.png">
 <meta property="og:image" content="https://jerrynju.github.io/XAML-03.png">
-<meta property="og:updated_time" content="2018-02-03T05:21:14.093Z">
+<meta property="og:updated_time" content="2018-02-28T14:29:45.013Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《深入浅出WPF》学习笔记——XAML详解">
+<meta name="twitter:title" content="深入浅出WPF">
 <meta name="twitter:image" content="https://jerrynju.github.io/XAML-01.png">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>《深入浅出WPF》学习笔记——XAML详解 | Jerry's Blog</title>
+  <title>深入浅出WPF | Jerry's Blog</title>
   
 
 
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《深入浅出WPF》学习笔记——XAML详解</h1>
+          <h1 class="post-title" itemprop="name headline">深入浅出WPF</h1>
         
 
         <div class="post-meta">
@@ -709,6 +709,107 @@
 <li>Binding的属性”Mode”控制数据流向，可枚举的值为：TwoWay、OneWay、OnTime、OneWayToSource和Default。</li>
 <li>Binding的属性”UpdateSourceTrigger”控制Binding的数据更新，可枚举的值为：PropertyChanged、LostFocus、Explicit和Default。</li>
 </ul>
+<h3 id="Binding的Path"><a href="#Binding的Path" class="headerlink" title="Binding的Path"></a>Binding的Path</h3><p>Binding的Path属性用来指定Binding需要关注源的那个属性，其类型是PropertyPath。</p>
+<p>如果Binding的源本身就是数据，就不需要指定Path，在C#代码中，需要用”.”来表示。</p>
+<h3 id="为Binding指定Source的几种方法"><a href="#为Binding指定Source的几种方法" class="headerlink" title="为Binding指定Source的几种方法"></a>为Binding指定Source的几种方法</h3><ul>
+<li>将单个对象指定为Source: 如果类型实现了INotifyPropertyChanged接口，可以通过在属性的set语句里激发PropertyChanged事件来通知Binding数据已被更新。</li>
+<li>将集合类型指定为Source：如数组、List\<t\>等。</t\></li>
+<li>将ADO.NET对象指定为Source：如DataTable和DataView等。</li>
+<li>使用XMLDataProvider将XML数据指定为Source：如将树状XML数据源与级联式的WPF控件（比如TreeView和Menu）进行Binding。</li>
+<li>将Dependency Object指定为Source：依赖对象既可以作为Binding的目标，也可以作为Binding的源，这样就可以形成Binding链，其依赖属性可以作为Path。</li>
+<li>将容器的DataContext指定为Source（默认）：可以只为Binding设置Path而不设置Source，它会沿控件树向外寻找，找到带有对应属性的控件，将其DataContext作为自己的Source。</li>
+<li>通过ElementName指定Source。</li>
+<li>通过Binding的RelativeSource指定相对Source：需要引用控件内部元素时使用。</li>
+<li>将ObjectDataProvider对象指定为Source：用于数据源不是通过属性而是通过方法来提供数据时。</li>
+<li>使用LINQ检索出的对象作为数据源。</li>
+</ul>
+<h3 id="Binding对数据的转换和校验"><a href="#Binding对数据的转换和校验" class="headerlink" title="Binding对数据的转换和校验"></a>Binding对数据的转换和校验</h3><p>可以使用Binding的ValidationRules属性来为每个Binding设置多个数据校验条件，其属性类型是Collection\<validationrule\>。</validationrule\></p>
+<p>当Binding的Source端Path和目标端属性的数据类型不一致时，需要添加数据转换器。对于简单的数据转换问题，WPF库会自动完成，否则，我们就需要自己写一个Converter。方法是实现一个具有IValueConverter接口的类。</p>
+<h3 id="MultiBinding——多路Binding"><a href="#MultiBinding——多路Binding" class="headerlink" title="MultiBinding——多路Binding"></a>MultiBinding——多路Binding</h3><p>MultiBinding将一组Binding对象聚合起来，其中的各个Binding对象可以有自己的数据校验和转换机制。</p>
+<h2 id="Property"><a href="#Property" class="headerlink" title="Property"></a>Property</h2><p>本章主要描述什么样的对象才能作为Binding的Target，以及Binding将把数据送往何处。</p>
+<h3 id="Dependency-Property——依赖属性"><a href="#Dependency-Property——依赖属性" class="headerlink" title="Dependency Property——依赖属性"></a>Dependency Property——依赖属性</h3><p>依赖属性可以自己没有值，能够通过Binding从数据源获取值。拥有依赖属性的对象称为依赖对象。</p>
+<p>WPF的所有UI控件都是依赖对象。</p>
+<p>其声明方法：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Student</span>: <span class="title">DependencyObject</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//使用public static readonly三个修饰符</span></span><br><span class="line"><span class="comment">//不使用new而是使用DependencyProperty.Register声明实例</span></span><br><span class="line"><span class="comment">//一般在成员变量名称后加上Property表明它是依赖属性</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> DependencyProperty NameProperty = </span><br><span class="line">		DependencyProperty.Register(<span class="string">"Name"</span>,<span class="keyword">typeof</span>(<span class="keyword">string</span>),<span class="keyword">typeof</span>(Student));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Attached-Property——附加属性"><a href="#Attached-Property——附加属性" class="headerlink" title="Attached Property——附加属性"></a>Attached Property——附加属性</h3><p>附加属性是在将对象放入一个特殊的环境后对象才具有的属性。</p>
+<p>附加属性的本质就是依赖属性，两者仅在注册器和包装器上有一点区别。</p>
+<p>附加属性使用DependencyProperty.RegisterAttached方法。</p>
+<h2 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h2><p>WPF中有两种“树”：Logical Tree 和 Visual Tree。</p>
+<p>Logical Tree完全由布局组件和控件组成，而控件则是由Visual Tree中的更小组件组成。</p>
+<p>可以使用Blend来更换控件的Template，以改变其外观。</p>
+<p>当一个路由事件被激发后，它将会沿着Visual Tree进行传递。</p>
+<p>Windows的消息驱动机制被封装成了事件模型，其中有3个关键点：</p>
+<ul>
+<li>事件的拥有者：消息发送者。事件被触发后，发送出消息。</li>
+<li>事件的响应者：消息的接收者、处理者。事件接收者使用事件处理器（Event Handler）对事件作出响应。</li>
+<li>事件的订阅关系：如果对象A关注对象B的某个事件是否发生，则称A订阅了B。事件本质上是一个使用event关键字修饰的委托（Delegate）类型成员变量，事件处理器则是一个函数。</li>
+</ul>
+<h3 id="Routed-Event——路由事件"><a href="#Routed-Event——路由事件" class="headerlink" title="Routed Event——路由事件"></a>Routed Event——路由事件</h3><p>路由事件的拥有者和响应者之间没有显式订阅关系，拥有者只负责激发，响应者负责侦听。</p>
+<p>路由事件是一个RoutedEvent类型的静态成员变量，它采用与属性系统类似的“静态字段→包装器”策略。</p>
+<p>创建自定义路由事件的方式：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public abstract class ButtonBase : ContentControl, ICommandSource</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//声明并注册路由事件</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> RoutedEvent ClickEvent = 		EventManager.RegisterRoutedEvent(<span class="string">"Click"</span>,RoutingStrategy.Bubble,<span class="keyword">typeof</span>(RoutedEventHandler),<span class="keyword">typeof</span>(ButtonBase)) <span class="comment">/*注册路由事件*/</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//为路由事件添加CLR事件包装器</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">event</span> RoutedEventHandler Click</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">add</span> &#123; <span class="keyword">this</span>.AddHandler(ClickEvent, <span class="keyword">value</span>); &#125;</span><br><span class="line">        <span class="keyword">remove</span> &#123; <span class="keyword">this</span>.RemoveHandler(ClickEvent, <span class="keyword">value</span>); &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//激发路由事件的方法。此方法在用户单击鼠标时被Windows系统调用</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">OnClick</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        RoutedEventArgs newEvent = <span class="keyword">new</span> RoutedEventArgs(ButtonBase.ClickEvent, <span class="keyword">this</span>);</span><br><span class="line">        <span class="keyword">this</span>.RaiseEvent(newEvent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Attached-Event——附加事件"><a href="#Attached-Event——附加事件" class="headerlink" title="Attached Event——附加事件"></a>Attached Event——附加事件</h3><p>附加事件的宿主一般不拥有在界面显示元素的能力，比如：</p>
+<ul>
+<li>Binding类：SourceUpdated事件、TargetUpdated事件。</li>
+<li>Mouse类：MouseEnter事件、MouseDown事件等。</li>
+<li>KeyBoard类：KeyDown事件、KeyUp事件等。</li>
+</ul>
+<h2 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h2><p>事件不具有约束力，而命令具有约束力。命令既可以约束代码结构和命名，也可以约束步骤逻辑。</p>
+<h3 id="命令系统的基本要素"><a href="#命令系统的基本要素" class="headerlink" title="命令系统的基本要素"></a>命令系统的基本要素</h3><ul>
+<li>Command：实现了ICommand接口的类。</li>
+<li>Command Source：实现了ICommandSource接口的类。</li>
+<li>Command Target：实现了IInputElement接口的类。</li>
+<li>Command Binding：将外围逻辑与命令关联起来。</li>
+</ul>
+<h3 id="命令的使用步骤"><a href="#命令的使用步骤" class="headerlink" title="命令的使用步骤"></a>命令的使用步骤</h3><ol>
+<li>创建命令类：使用RoutedCommand类或其派生类。</li>
+<li>声明实例：程序中的命令一般使用Singletone模式来减少复杂度，即一种命令只有一个实例。</li>
+<li>指定命令的源：一旦把命令指派给命令源，那么当命令不能被执行的时候，命令源的控件将处在不可用状态。</li>
+<li>指定命令目标：命令目标是命令源的属性。如果没有指定命令目标，则当前拥有焦点的对象就是命令目标。</li>
+<li>设置命令关联：CommandBinding用来在命令执行前判断是否可以执行，在执行后进行后续处理。</li>
+</ol>
+<div class="note info"><p>命令目标会不停发送可路由的PreviewCanExcute和CanExcute附加事件，这可能会带来性能降低和隐藏的Bug。</p></div>
+<h3 id="WPF中的命令库"><a href="#WPF中的命令库" class="headerlink" title="WPF中的命令库"></a>WPF中的命令库</h3><ul>
+<li>ApplicationCommands</li>
+<li>ComponentCommands</li>
+<li>NavigationCommands</li>
+<li>MediaCommands</li>
+<li>EditingCommands</li>
+</ul>
+<p>ICommandSource接口中有一个CommandPrameter属性，实现了该接口的命令源对象可以发送多个命令。</p>
+<p>可以使用Binding将不同命令赋值给控件的Command属性。</p>
+<h2 id="Resource"><a href="#Resource" class="headerlink" title="Resource"></a>Resource</h2><p>WPF中的数据有四个存储等级：</p>
+<ul>
+<li>数据库：仓库</li>
+<li>资源文件：旅行箱</li>
+<li>对象资源：随身背包</li>
+<li>变量：手里</li>
+</ul>
+<h3 id="对象级资源"><a href="#对象级资源" class="headerlink" title="对象级资源"></a>对象级资源</h3><p>每个WPF界面元素都有一个Resources属性，继承自FrameworkElement类，类型为ResourceDictionary，以“键-值”对形式存储资源，其中的资源对象为object类型，XAML会根据标签Attribute自动转换，而C#需要手动转换。</p>
+<p>可以使用ResourceDictionary中的Source属性引入外部资源文件。</p>
+<ul>
+<li>StaticResource：在程序载入内存时一次性使用。</li>
+<li>DynamicResource：在程序运行中会使用。</li>
+</ul>
+<h3 id="二进制资源"><a href="#二进制资源" class="headerlink" title="二进制资源"></a>二进制资源</h3><h4 id="添加非文件字符串资源："><a href="#添加非文件字符串资源：" class="headerlink" title="添加非文件字符串资源："></a>添加非文件字符串资源：</h4><p>使用Properties名称空间中的Resources.resx资源文件，其内容组织形式为“键-值”对，编译后，Resources.resx文件会变成Properties中的Resources类，使用这个类的方法或属性就能获取资源。需要将Resources.resx的访问级别由Internal改为Public，才能让XAML编辑器访问它。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在XAML中访问resx文件的语法</span></span><br><span class="line">...</span><br><span class="line">    xmlns:prop=<span class="string">"clr-namespace:WpfApplication1.Properties"</span></span><br><span class="line">...</span><br><span class="line">    &lt;TextBlock Text=<span class="string">"&#123;x:Static prop:Resources.UserName&#125;"</span>/&gt;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h4 id="添加其他外部文件"><a href="#添加其他外部文件" class="headerlink" title="添加其他外部文件"></a>添加其他外部文件</h4><p>将文件直接加入到项目文件中。</p>
+<p>如果想让外部文件编译成二进制资源，需要将该文件属性中的Build Action设为Resource，将Copy to Output Directory设为Do not copy。</p>
+<h4 id="使用Pack-URI路径访问二进制资源"><a href="#使用Pack-URI路径访问二进制资源" class="headerlink" title="使用Pack URI路径访问二进制资源"></a>使用Pack URI路径访问二进制资源</h4><p>WPF使用Pack URI路径访问二进制资源。语法格式如下：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pack:<span class="comment">//application...[/程序集名称;][可选版本号;][文件夹名称/]文件名称</span></span><br><span class="line"><span class="comment">//可精简为</span></span><br><span class="line">[<span class="meta">文件夹名称/</span>]文件名称</span><br></pre></td></tr></table></figure>
+<h2 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h2><p>分为两大类：</p>
+<ul>
+<li>ControlTemplate：算法内容的表现形式。控件的外观。</li>
+<li>DataTemplate：数据内容的表现形式。数据的外观。</li>
+</ul>
+<h3 id="DataTemplate"><a href="#DataTemplate" class="headerlink" title="DataTemplate"></a>DataTemplate</h3><p>常用处：</p>
+<ul>
+<li>ContentControl的ContentTemplate属性。</li>
+<li>ItemsControl的ItemTemplate属性。</li>
+<li>GridViewColumn的CellTemplate属性。</li>
+</ul>
+<h3 id="ControlTemplate"><a href="#ControlTemplate" class="headerlink" title="ControlTemplate"></a>ControlTemplate</h3><p>ControlTemplate由XAML代码编写并放在资源字典里。</p>
+<p>DataTemplate控件树的树根为ContentPresenter控件，它的ContentTemplate属性值为DataTemplate实例。ContentPresenter控件是ControlTemplate控件树上的一个节点。</p>
 <script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -894,7 +995,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -916,7 +1017,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -959,7 +1060,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XAML"><span class="nav-number">1.</span> <span class="nav-text">XAML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XAML基础"><span class="nav-number">1.1.</span> <span class="nav-text">XAML基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WPF项目文件"><span class="nav-number">1.1.1.</span> <span class="nav-text">WPF项目文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最简单的XAML代码"><span class="nav-number">1.1.2.</span> <span class="nav-text">最简单的XAML代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XAML和C-的对应关系"><span class="nav-number">1.1.3.</span> <span class="nav-text">XAML和C#的对应关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XAML和C-引用外部程序集的方法"><span class="nav-number">1.1.4.</span> <span class="nav-text">XAML和C#引用外部程序集的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XAML-1"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">XAML</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">C</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为对象属性赋值"><span class="nav-number">1.1.5.</span> <span class="nav-text">为对象属性赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Attribute简单赋值"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">Attribute简单赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂赋值"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">复杂赋值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记扩展"><span class="nav-number">1.1.6.</span> <span class="nav-text">标记扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XAML中的Event-Handler"><span class="nav-number">1.1.7.</span> <span class="nav-text">XAML中的Event Handler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释"><span class="nav-number">1.1.8.</span> <span class="nav-text">注释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x名称空间中的成员"><span class="nav-number">1.2.</span> <span class="nav-text">x名称空间中的成员</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#出现在Attribute中的成员"><span class="nav-number">1.2.1.</span> <span class="nav-text">出现在Attribute中的成员</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#出现在标记扩展中的成员"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">出现在标记扩展中的成员</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指令元素"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">指令元素</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控件"><span class="nav-number">1.3.</span> <span class="nav-text">控件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ContentControl族"><span class="nav-number">1.3.1.</span> <span class="nav-text">ContentControl族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HeaderContentControl族"><span class="nav-number">1.3.2.</span> <span class="nav-text">HeaderContentControl族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ItemsControl族"><span class="nav-number">1.3.3.</span> <span class="nav-text">ItemsControl族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HeaderedItemsControl族"><span class="nav-number">1.3.4.</span> <span class="nav-text">HeaderedItemsControl族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Decorator族"><span class="nav-number">1.3.5.</span> <span class="nav-text">Decorator族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TextBlock和TextBox"><span class="nav-number">1.3.6.</span> <span class="nav-text">TextBlock和TextBox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shape族"><span class="nav-number">1.3.7.</span> <span class="nav-text">Shape族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Panel族"><span class="nav-number">1.3.8.</span> <span class="nav-text">Panel族</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局"><span class="nav-number">1.4.</span> <span class="nav-text">布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用布局元素"><span class="nav-number">1.4.1.</span> <span class="nav-text">常用布局元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布局元素的尺寸单位"><span class="nav-number">1.4.2.</span> <span class="nav-text">布局元素的尺寸单位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grid"><span class="nav-number">1.4.3.</span> <span class="nav-text">Grid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StackPanel"><span class="nav-number">1.4.4.</span> <span class="nav-text">StackPanel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas"><span class="nav-number">1.4.5.</span> <span class="nav-text">Canvas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DockPanel"><span class="nav-number">1.4.6.</span> <span class="nav-text">DockPanel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WrapPanel"><span class="nav-number">1.4.7.</span> <span class="nav-text">WrapPanel</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WPF内部原理"><span class="nav-number">2.</span> <span class="nav-text">WPF内部原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Binding"><span class="nav-number">2.1.</span> <span class="nav-text">Data Binding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个简单的Binding实例"><span class="nav-number">2.1.1.</span> <span class="nav-text">一个简单的Binding实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Binding的源"><span class="nav-number">2.1.2.</span> <span class="nav-text">Binding的源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控件作为Binding源和Binding标记扩展"><span class="nav-number">2.1.3.</span> <span class="nav-text">控件作为Binding源和Binding标记扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Binding的方向和数据更新"><span class="nav-number">2.1.4.</span> <span class="nav-text">Binding的方向和数据更新</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XAML"><span class="nav-number">1.</span> <span class="nav-text">XAML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XAML基础"><span class="nav-number">1.1.</span> <span class="nav-text">XAML基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#WPF项目文件"><span class="nav-number">1.1.1.</span> <span class="nav-text">WPF项目文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最简单的XAML代码"><span class="nav-number">1.1.2.</span> <span class="nav-text">最简单的XAML代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XAML和C-的对应关系"><span class="nav-number">1.1.3.</span> <span class="nav-text">XAML和C#的对应关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XAML和C-引用外部程序集的方法"><span class="nav-number">1.1.4.</span> <span class="nav-text">XAML和C#引用外部程序集的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XAML-1"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">XAML</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">C</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为对象属性赋值"><span class="nav-number">1.1.5.</span> <span class="nav-text">为对象属性赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Attribute简单赋值"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">Attribute简单赋值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂赋值"><span class="nav-number">1.1.5.2.</span> <span class="nav-text">复杂赋值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标记扩展"><span class="nav-number">1.1.6.</span> <span class="nav-text">标记扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XAML中的Event-Handler"><span class="nav-number">1.1.7.</span> <span class="nav-text">XAML中的Event Handler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释"><span class="nav-number">1.1.8.</span> <span class="nav-text">注释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#x名称空间中的成员"><span class="nav-number">1.2.</span> <span class="nav-text">x名称空间中的成员</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#出现在Attribute中的成员"><span class="nav-number">1.2.1.</span> <span class="nav-text">出现在Attribute中的成员</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#出现在标记扩展中的成员"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">出现在标记扩展中的成员</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指令元素"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">指令元素</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控件"><span class="nav-number">1.3.</span> <span class="nav-text">控件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ContentControl族"><span class="nav-number">1.3.1.</span> <span class="nav-text">ContentControl族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HeaderContentControl族"><span class="nav-number">1.3.2.</span> <span class="nav-text">HeaderContentControl族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ItemsControl族"><span class="nav-number">1.3.3.</span> <span class="nav-text">ItemsControl族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HeaderedItemsControl族"><span class="nav-number">1.3.4.</span> <span class="nav-text">HeaderedItemsControl族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Decorator族"><span class="nav-number">1.3.5.</span> <span class="nav-text">Decorator族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TextBlock和TextBox"><span class="nav-number">1.3.6.</span> <span class="nav-text">TextBlock和TextBox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shape族"><span class="nav-number">1.3.7.</span> <span class="nav-text">Shape族</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Panel族"><span class="nav-number">1.3.8.</span> <span class="nav-text">Panel族</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局"><span class="nav-number">1.4.</span> <span class="nav-text">布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用布局元素"><span class="nav-number">1.4.1.</span> <span class="nav-text">常用布局元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布局元素的尺寸单位"><span class="nav-number">1.4.2.</span> <span class="nav-text">布局元素的尺寸单位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Grid"><span class="nav-number">1.4.3.</span> <span class="nav-text">Grid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StackPanel"><span class="nav-number">1.4.4.</span> <span class="nav-text">StackPanel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas"><span class="nav-number">1.4.5.</span> <span class="nav-text">Canvas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DockPanel"><span class="nav-number">1.4.6.</span> <span class="nav-text">DockPanel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WrapPanel"><span class="nav-number">1.4.7.</span> <span class="nav-text">WrapPanel</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WPF内部原理"><span class="nav-number">2.</span> <span class="nav-text">WPF内部原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Binding"><span class="nav-number">2.1.</span> <span class="nav-text">Data Binding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个简单的Binding实例"><span class="nav-number">2.1.1.</span> <span class="nav-text">一个简单的Binding实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Binding的源"><span class="nav-number">2.1.2.</span> <span class="nav-text">Binding的源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控件作为Binding源和Binding标记扩展"><span class="nav-number">2.1.3.</span> <span class="nav-text">控件作为Binding源和Binding标记扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Binding的方向和数据更新"><span class="nav-number">2.1.4.</span> <span class="nav-text">Binding的方向和数据更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Binding的Path"><span class="nav-number">2.1.5.</span> <span class="nav-text">Binding的Path</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为Binding指定Source的几种方法"><span class="nav-number">2.1.6.</span> <span class="nav-text">为Binding指定Source的几种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Binding对数据的转换和校验"><span class="nav-number">2.1.7.</span> <span class="nav-text">Binding对数据的转换和校验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MultiBinding——多路Binding"><span class="nav-number">2.1.8.</span> <span class="nav-text">MultiBinding——多路Binding</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Property"><span class="nav-number">2.2.</span> <span class="nav-text">Property</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dependency-Property——依赖属性"><span class="nav-number">2.2.1.</span> <span class="nav-text">Dependency Property——依赖属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attached-Property——附加属性"><span class="nav-number">2.2.2.</span> <span class="nav-text">Attached Property——附加属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Event"><span class="nav-number">2.3.</span> <span class="nav-text">Event</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Routed-Event——路由事件"><span class="nav-number">2.3.1.</span> <span class="nav-text">Routed Event——路由事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attached-Event——附加事件"><span class="nav-number">2.3.2.</span> <span class="nav-text">Attached Event——附加事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Command"><span class="nav-number">2.4.</span> <span class="nav-text">Command</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令系统的基本要素"><span class="nav-number">2.4.1.</span> <span class="nav-text">命令系统的基本要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令的使用步骤"><span class="nav-number">2.4.2.</span> <span class="nav-text">命令的使用步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WPF中的命令库"><span class="nav-number">2.4.3.</span> <span class="nav-text">WPF中的命令库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resource"><span class="nav-number">2.5.</span> <span class="nav-text">Resource</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象级资源"><span class="nav-number">2.5.1.</span> <span class="nav-text">对象级资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二进制资源"><span class="nav-number">2.5.2.</span> <span class="nav-text">二进制资源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加非文件字符串资源："><span class="nav-number">2.5.2.1.</span> <span class="nav-text">添加非文件字符串资源：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加其他外部文件"><span class="nav-number">2.5.2.2.</span> <span class="nav-text">添加其他外部文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Pack-URI路径访问二进制资源"><span class="nav-number">2.5.2.3.</span> <span class="nav-text">使用Pack URI路径访问二进制资源</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Template"><span class="nav-number">2.6.</span> <span class="nav-text">Template</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DataTemplate"><span class="nav-number">2.6.1.</span> <span class="nav-text">DataTemplate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ControlTemplate"><span class="nav-number">2.6.2.</span> <span class="nav-text">ControlTemplate</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
